@@ -1,0 +1,76 @@
+<div class="applicazione">
+  <nav class="navbar">
+    <div class="contenitore-nav">
+      <a routerLink="/" class="brand-nav" (click)="chiudiMenuMobile()">
+        <h1> {{ titoloApp }}</h1>
+      </a>
+      
+      <div class="collegamenti-nav desktop-only">
+        <a routerLink="/" 
+           routerLinkActive="attivo" 
+           [routerLinkActiveOptions]="{exact: true}"
+           class="link-nav">
+           Home
+        </a>
+        <a routerLink="/admin" 
+           routerLinkActive="attivo" 
+           class="link-nav">
+           Gestione
+        </a>
+        <a routerLink="/carrello" 
+           routerLinkActive="attivo" 
+           class="link-carrello">
+          🛒 Carrello
+          <span class="badge-carrello" *ngIf="(conteggioCarrello$ | async) as count">
+              {{ count > 0 ? count : '' }}
+          </span>
+
+        </a>
+      </div>
+      
+      <button class="btn-menu-mobile mobile-only" (click)="toggleMenuMobile()">
+        <span [class]="menuMobileAperto ? 'icona-chiudi' : 'icona-menu'">
+          {{ menuMobileAperto ? 'x' : '☰' }}
+        </span>
+      </button>
+    </div>
+    
+    <div class="menu-mobile" [class.aperto]="menuMobileAperto">
+      <a routerLink="/" 
+         routerLinkActive="attivo" 
+         [routerLinkActiveOptions]="{exact: true}"
+         class="link-mobile"
+         (click)="chiudiMenuMobile()">
+         Home
+      </a>
+      <a routerLink="/admin" 
+         routerLinkActive="attivo" 
+         class="link-mobile"
+         (click)="chiudiMenuMobile()">
+         Gestione Prodotti
+      </a>
+      <a routerLink="/carrello" 
+         routerLinkActive="attivo" 
+         class="link-mobile"
+         (click)="chiudiMenuMobile()">
+        🛒 Carrello 
+        <span *ngIf="(conteggioCarrello$ | async) || 0 > 0">
+            ({{ conteggioCarrello$ | async }})
+        </span>      
+      </a>
+    </div>
+  </nav>
+
+  <main class="contenuto-principale">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="footer">
+    <div class="contenuto-footer">
+      <p>&copy; 2024 {{ titoloApp }}. Progetto universitario - Ingegneria Informatica.</p>
+      <p class="info-footer">
+        <small>Sviluppato usando Angular + Spring Boot + MySQL</small>
+      </p>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,13 @@
+com/negozio/entita/Ordine.class
+com/negozio/controller/ProdottoController.class
+com/negozio/entita/Ordine$StatoOrdine.class
+com/negozio/entita/Prodotto.class
+com/negozio/entita/ElementoOrdine.class
+com/negozio/controller/TestController.class
+com/negozio/servizi/ProdottoService.class
+com/negozio/repository/ProdottoRepository.class
+com/negozio/entita/Utente$RuoloUtente.class
+com/negozio/configurazione/ConfigurazioneCors.class
+com/negozio/NegozioApplication.class
+com/negozio/configurazione/ConfigurazioneSicurezza.class
+com/negozio/entita/Utente.class

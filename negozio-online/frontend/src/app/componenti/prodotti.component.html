@@ -1,0 +1,43 @@
+<div class="contenitore-prodotti">
+  <h2>I nostri prodotti migliori</h2>
+  
+  <div class="barra-ricerca">
+    <input type="text" placeholder="Cerca prodotti..." [(ngModel)]="testoRicerca" class="input-ricerca">
+    <button (click)="cerca()" class="btn-cerca">Cerca</button>
+  </div>
+  
+  <div *ngIf="loading$ | async" class="caricamento">
+    <p>Caricamento in corso...</p>
+  </div>
+  
+  <div class="griglia-prodotti" *ngIf="!(loading$ | async)">
+    <div class="card-prodotto" *ngFor="let prodotto of prodotti$ | async; trackBy: trackByProdotto">
+      <img [src]="getUrlImmagine(prodotto)" [alt]="prodotto.nome" class="immagine-prodotto">
+      
+      <div class="info-prodotto">
+        <h3>{{ prodotto.nome }}</h3>
+        <p class="descrizione">{{ prodotto.descrizione }}</p>
+        <div class="prezzo">€{{ prodotto.prezzo }}</div>
+        
+        <div class="info-stock" *ngIf="prodotto.quantita < 10 && prodotto.quantita > 0">
+          <span class="avviso-stock">Solo {{ prodotto.quantita }} rimasti!</span>
+        </div>
+        
+        <div class="esaurito" *ngIf="prodotto.quantita === 0">
+          ESAURITO
+        </div>
+        
+        <button 
+          class="btn-aggiungi-carrello" 
+          (click)="aggiungiProdottoAlCarrello(prodotto)"
+          [disabled]="prodotto.quantita === 0">
+          {{ prodotto.quantita === 0 ? 'Non disponibile' : 'Aggiungi al carrello' }}
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="(prodotti$ | async)?.length === 0 && !(loading$ | async)" class="nessun-prodotto">
+    <p>Nessun prodotto trovato :(</p>
+  </div>
+</div>

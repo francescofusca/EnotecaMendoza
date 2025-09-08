@@ -1,0 +1,211 @@
+.applicazione {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.contenitore-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.brand-nav h1 {
+  margin: 0;
+  padding: 18px 0;
+  color: #ecf0f1;
+  font-size: 24px;
+  text-decoration: none !important;
+}
+
+.brand-nav {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-nav:hover h1 {
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+.collegamenti-nav {
+  display: flex;
+  gap: 35px;
+}
+
+.link-nav, .link-carrello {
+  color: #bdc3c7;
+  text-decoration: none;
+  padding: 22px 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.link-nav:hover,
+.link-carrello:hover,
+.link-nav.attivo,
+.link-carrello.attivo {
+  color: #ecf0f1;
+  border-bottom-color: #e74c3c;
+  transform: translateY(-1px);
+}
+
+.link-carrello {
+  position: relative;
+}
+
+.badge-carrello {
+  position: absolute;
+  top: 8px;
+  right: -12px;
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.btn-menu-mobile {
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.btn-menu-mobile:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #34495e;
+  border-top: 1px solid #4a5f7a;
+}
+
+.menu-mobile.aperto {
+  display: flex;
+}
+
+.link-mobile {
+  color: #bdc3c7;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid #4a5f7a;
+  transition: background-color 0.2s ease;
+}
+
+.link-mobile:hover,
+.link-mobile.attivo {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.link-mobile:last-child {
+  border-bottom: none;
+}
+
+.contenuto-principale {
+  flex: 1;
+  background-color: #ecf0f1;
+  min-height: calc(100vh - 160px);
+}
+
+.footer {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  color: #bdc3c7;
+  padding: 25px 0;
+  margin-top: auto;
+  border-top: 3px solid #3498db;
+}
+
+.contenuto-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contenuto-footer p {
+  margin: 8px 0;
+}
+
+.info-footer {
+  opacity: 0.8;
+}
+
+.info-footer small {
+  font-size: 12px;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-only {
+    display: block !important;
+  }
+  
+  .brand-nav h1 {
+    font-size: 20px;
+  }
+  
+  .contenitore-nav {
+    padding: 0 15px;
+  }
+  
+  .badge-carrello {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-nav h1 {
+    font-size: 18px !important;
+  }
+  
+  .contenuto-footer {
+    padding: 0 15px;
+  }
+  
+  .contenuto-footer p {
+    font-size: 14px;
+  }
+}

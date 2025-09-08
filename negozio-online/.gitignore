@@ -1,0 +1,15 @@
+node_modules/
+npm-debug.log*
+/dist
+/target
+/build
+.vscode/
+.idea/
+*.iml
+*.iws
+.DS_Store
+Thumbs.db
+*.log
+*.db
+.env
+.env.local

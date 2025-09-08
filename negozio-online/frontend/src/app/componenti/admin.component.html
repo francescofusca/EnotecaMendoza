@@ -1,0 +1,133 @@
+<div class="contenitore-admin">
+  <h2> Pannello di Amministrazione - Gestione Prodotti</h2>
+  
+  <div class="messaggio-successo" *ngIf="messaggioSuccesso">
+     {{ messaggioSuccesso }}
+  </div>
+  
+  <div class="messaggio-errore" *ngIf="messaggioErrore">
+     {{ messaggioErrore }}
+  </div>
+  
+  <div class="azioni-admin">
+    <button class="btn btn-primario" (click)="mostraNascondiForm()">
+      {{ mostraForm ? ' Annulla' : ' Aggiungi Nuovo Prodotto' }}
+    </button>
+    <button class="btn btn-secondario" (click)="caricaProdotti()">
+       Ricarica Lista
+    </button>
+  </div>
+
+  <div class="form-prodotto" *ngIf="mostraForm">
+    <h3>{{ prodottoInModifica ? ' Modifica Prodotto' : ' Nuovo Prodotto' }}</h3>
+    
+    <form [formGroup]="formProdotto" (ngSubmit)="salvaProdotto()">
+      <div class="riga-form">
+        <div class="gruppo-form">
+          <label>Nome Prodotto *:</label>
+          <input type="text" formControlName="nome" class="controllo-form" placeholder="Inserisci nome prodotto">
+          <div *ngIf="formProdotto.get('nome')?.errors?.['required'] && formProdotto.get('nome')?.touched" class="errore-validazione">
+            Il nome è obbligatorio
+          </div>
+        </div>
+        
+        <div class="gruppo-form">
+          <label>Prezzo (€) *:</label>
+          <input type="number" formControlName="prezzo" class="controllo-form" step="0.01" min="0" placeholder="0.00">
+          <div *ngIf="formProdotto.get('prezzo')?.errors?.['required'] && formProdotto.get('prezzo')?.touched" class="errore-validazione">
+            Il prezzo è obbligatorio
+          </div>
+        </div>
+      </div>
+      
+      <div class="gruppo-form">
+        <label>Descrizione:</label>
+        <textarea formControlName="descrizione" class="controllo-form" rows="3" placeholder="Descrizione del prodotto (opzionale)"></textarea>
+      </div>
+      
+      <div class="riga-form">
+        <div class="gruppo-form">
+          <label>Quantità Disponibile *:</label>
+          <input type="number" formControlName="quantita" class="controllo-form" min="0" placeholder="0">
+        </div>
+        
+        <div class="gruppo-form">
+          <label>Categoria:</label>
+          <select formControlName="categoriaId" class="controllo-form">
+            <option value="1"> Elettronica</option>
+            <option value="2"> Abbigliamento</option>
+            <option value="3"> Casa e Giardino</option>
+            <option value="4"> Sport e Tempo Libero</option>
+            <option value="5"> Libri e Media</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="gruppo-form">
+        <label>URL Immagine:</label>
+        <input type="url" formControlName="urlImmagine" class="controllo-form" placeholder="https://esempio.com/immagine.jpg">
+      </div>
+      
+      <div class="azioni-form">
+        <button type="submit" class="btn btn-successo" [disabled]="!formProdotto.valid">
+          {{ prodottoInModifica ? ' Aggiorna Prodotto' : ' Crea Prodotto' }}
+        </button>
+        <button type="button" class="btn btn-secondario" (click)="resetForm()">
+          Annulla
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="tabella-prodotti">
+    <h3>Prodotti Esistenti ({{ elencoProdotti.length }} totali)</h3>
+    
+    <div class="contenitore-tabella">
+      <table class="tabella">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Immagine</th>
+            <th>Nome</th>
+            <th>Prezzo</th>
+            <th>Stock</th>
+            <th>Categoria</th>
+            <th>Azioni</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prodotto of elencoProdotti; index as i">
+            <td>{{ prodotto.id }}</td>
+            <td>
+              <img [src]="prodotto.urlImmagine || 'assets/immagini/no-image.png'" 
+                   [alt]="prodotto.nome" class="miniatura-immagine">
+            </td>
+            <td>
+              <strong>{{ prodotto.nome }}</strong>
+              <br>
+              <small class="descrizione-breve">{{ prodotto.descrizione | slice:0:50 }}{{ prodotto.descrizione && prodotto.descrizione.length > 50 ? '...' : '' }}</small>
+            </td>
+            <td class="prezzo-cella">€{{ prodotto.prezzo }}</td>
+            <td [class.stock-basso]="prodotto.quantita < 5">
+              {{ prodotto.quantita }}
+              <span *ngIf="prodotto.quantita < 5" class="avviso-stock"></span>
+            </td>
+            <td>{{ prodotto.categoriaId }}</td>
+            <td>
+              <button class="btn btn-sm btn-warning" (click)="modificaProdotto(prodotto)" title="Modifica prodotto">
+                 Modifica
+              </button>
+              <button class="btn btn-sm btn-pericolo" (click)="eliminaProdotto(prodotto.id)" title="Elimina prodotto">
+                 Elimina
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div *ngIf="elencoProdotti.length === 0" class="nessun-prodotto">
+      <p> Nessun prodotto trovato nel database.</p>
+    </div>
+  </div>
+</div>
