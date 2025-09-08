@@ -16,6 +16,9 @@ export class ProdottiComponent implements OnInit {
   prodotti$: Observable<Prodotto[]>;
   loading$: Observable<boolean>;
   testoRicerca: string = '';
+
+
+  private readonly backendUrl = 'http://localhost:8080';
   
   constructor(private store: Store<AppState>) {
     this.prodotti$ = this.store.select(selezionaTuttiProdotti);
@@ -33,15 +36,22 @@ export class ProdottiComponent implements OnInit {
   }
   
   getUrlImmagine(prodotto: Prodotto): string {
-    if(prodotto.urlImmagine && prodotto.urlImmagine.length > 0) {
-      return prodotto.urlImmagine;
-    } else {
-      return 'assets/immagini/no-image.png';
+    if (!prodotto.urlImmagine) {
+      return 'assets/immagini/no-image.png'; 
     }
+    
+   
+    if (prodotto.urlImmagine.startsWith('http')) {
+      return prodotto.urlImmagine;
+    }
+    
+    
+    return `${this.backendUrl}${prodotto.urlImmagine}`;
   }
   
   cerca() {
     console.log('Cercando:', this.testoRicerca);
+    
   }
   
   trackByProdotto(index: number, prodotto: Prodotto): number {

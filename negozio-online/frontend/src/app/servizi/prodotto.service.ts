@@ -60,6 +60,16 @@ export class ProdottoService {
     return this.http.get<Prodotto[]>(url)
       .pipe(catchError(this.gestisciErrore));
   }
+  
+  uploadImmagine(prodottoId: number, file: File): Observable<Prodotto> {
+    const formData = new FormData();
+    
+    formData.append('file', file, file.name);
+
+    const url = `${this.urlBase}/${prodottoId}/upload-immagine`;
+    return this.http.post<Prodotto>(url, formData)
+      .pipe(catchError(this.gestisciErrore));
+  }
 
   private gestisciErrore(errore: HttpErrorResponse) {
     console.error('Errore HTTP:', errore);
@@ -72,6 +82,6 @@ export class ProdottoService {
       messaggioErrore = `Codice errore: ${errore.status}, Messaggio: ${errore.message}`;
     }
     
-    return throwError(messaggioErrore);
+    return throwError(() => new Error(messaggioErrore)); 
   }
 }

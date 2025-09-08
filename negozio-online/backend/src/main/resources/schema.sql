@@ -40,7 +40,7 @@ CREATE TABLE prodotti (
     categoria_id BIGINT,
     attivo BOOLEAN DEFAULT TRUE,
     data_creazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    data_modifica TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Semplificato per H2
+    data_modifica TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
     FOREIGN KEY (categoria_id) REFERENCES categorie(id)
 );
 
@@ -48,12 +48,12 @@ CREATE TABLE ordini (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     utente_id BIGINT,
     totale DECIMAL(10,2) NOT NULL,
-    stato VARCHAR(20) DEFAULT 'IN_ATTESA', -- Usiamo VARCHAR invece di ENUM per H2
+    stato VARCHAR(20) DEFAULT 'IN_ATTESA', 
     indirizzo_spedizione TEXT,
     metodo_pagamento VARCHAR(50),
     note TEXT,
     data_creazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    data_aggiornamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Semplificato per H2
+    data_aggiornamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
     FOREIGN KEY (utente_id) REFERENCES utenti(id)
 );
 
