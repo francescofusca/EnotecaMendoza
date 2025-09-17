@@ -6,8 +6,8 @@
 }
 
 .navbar {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  color: white;
+  background: #800020;
+  color: black;
   padding: 0;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   position: sticky;
@@ -19,7 +19,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
 }
@@ -27,7 +27,7 @@
 .brand-nav h1 {
   margin: 0;
   padding: 18px 0;
-  color: #ecf0f1;
+  color: black;
   font-size: 24px;
   text-decoration: none !important;
 }
@@ -38,23 +38,27 @@
 }
 
 .brand-nav:hover h1 {
-  color: #3498db;
-  transition: color 0.3s ease;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
-.collegamenti-nav {
+.collegamenti-nav-centrali {
   display: flex;
-  gap: 35px;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .link-nav, .link-carrello {
-  color: #bdc3c7;
+  color: black;
   text-decoration: none;
   padding: 22px 0;
   border-bottom: 3px solid transparent;
   transition: all 0.3s ease;
   position: relative;
   font-weight: 500;
+  opacity: 0.8;
 }
 
 .link-nav:hover,
@@ -129,6 +133,26 @@
 
 .link-mobile:last-child {
   border-bottom: none;
+}
+
+.barra-info-utente {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  border-bottom: 2px solid #3498db;
+  padding: 8px 0;
+}
+
+.contenitore-info-utente {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contenitore-info-utente .info-utente {
+  color: #ecf0f1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0;
 }
 
 .contenuto-principale {
@@ -208,4 +232,8 @@
   .contenuto-footer p {
     font-size: 14px;
   }
+
+}
+.link-logout {
+  cursor: pointer; /* Rende il link del logout cliccabile */
 }

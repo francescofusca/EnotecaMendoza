@@ -1,24 +1,26 @@
-
+-- Pulizia completa e reset degli ID
 DELETE FROM elementi_ordine;
 DELETE FROM ordini;
 DELETE FROM prodotti;
+DELETE FROM utenti;
 DELETE FROM categorie;
+
 ALTER TABLE elementi_ordine ALTER COLUMN id RESTART WITH 1;
 ALTER TABLE ordini ALTER COLUMN id RESTART WITH 1;
 ALTER TABLE prodotti ALTER COLUMN id RESTART WITH 1;
+ALTER TABLE utenti ALTER COLUMN id RESTART WITH 1;
 ALTER TABLE categorie ALTER COLUMN id RESTART WITH 1;
 
+-- Categorie
+INSERT INTO categorie (id, nome) VALUES (1, 'Vini Rossi'), (2, 'Vini Bianchi'), (3, 'Vini Rosati'), (4, 'Vini da 375 ml'), (5, 'Vini Spumanti'), (6, 'Vini Dolci');
 
-INSERT INTO categorie (id, nome, descrizione) VALUES
-(1, 'Vini Rossi', 'Una selezione dei migliori vini rossi, dalla Calabria e dal mondo.'),
-(2, 'Vini Bianchi', 'Vini bianchi freschi e aromatici, perfetti per ogni occasione.'),
-(3, 'Vini Rosati', 'La freschezza dei bianchi con il carattere dei rossi.'),
-(4, 'Vini da 375 ml', 'Le nostre migliori etichette in formato mezza bottiglia.'),
-(5, 'Vini Spumanti', 'Bollicine per celebrare i momenti speciali.'),
-(6, 'Vini Dolci', 'Vini da dessert e da meditazione per concludere il pasto.');
+-- Utenti con password="password"
+INSERT INTO utenti (email, password, nome, cognome, ruolo, saldo) VALUES
+('admin@negozio.com', '$2a$10$wXpO4BrHEhaKbiEnH7yVfO5WfyWML1LPX/JW2/njy/9p.J3o3lLpu', 'Mario', 'Rossi', 'ADMIN', 1000.00),
+('utente@test.com', '$2a$10$wXpO4BrHEhaKbiEnH7yVfO5WfyWML1LPX/JW2/njy/9p.J3o3lLpu', 'Giulia', 'Verdi', 'UTENTE', 1000.00);
 
 
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('I Monaci', 'Giraldi & Giraldi - Uvaggio: Magliocco', 16.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('I Monaci', 'Giraldi & Giraldi - Uvaggio: Magliocco', 16.00, 12, 1, '/Foto_Vini_FINALE/I-Monaci-IGP-Calabria-Rosso-di-Giraldi-Giraldi.jpg-2.webp');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Don Onofrio', 'Giraldi & Giraldi - Uvaggio: Magliocco', 25.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Calabrise', 'Ippolito - Uvaggio: Nerello', 15.00, 12, 1, '/Foto_Vini_FINALE/Calabrise - Ippolito_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('160 Anni', 'Ippolito - Uvaggio: Gaglioppo', 32.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
@@ -239,11 +241,6 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Primitivo Dolce', 'Vignaioli del Salento - Uvaggio: Primitivo', 4.00, 12, 6, '/Foto_Vini_FINALE/Primitivo Dolce - Vignaioli del Salento_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Vin Santo (Poliziano)', 'Poliziano - Uvaggio: Trebiano', 6.00, 12, 6, '/Foto_Vini_FINALE/Vin Santo - Poliziano_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Vin Santo (Antinori)', 'Antinori - Uvaggio: Trebiano, Malvasia', 4.00, 12, 6, '/Foto_Vini_FINALE/Vin Santo - Antinori_1.jpg');
-
-
-INSERT INTO utenti (email, password, nome, cognome, ruolo) VALUES
-('admin@negozio.com', '$2a$10$demopasswordhash', 'Mario', 'Rossi', 'ADMIN'),
-('utente@test.com', '$2a$10$demopasswordhash', 'Giulia', 'Verdi', 'UTENTE');
 
 INSERT INTO ordini (utente_id, totale, stato, indirizzo_spedizione, metodo_pagamento) VALUES
 (2, 47.00, 'CONFERMATO', 'Via Roma 123, 80100 Napoli', 'Carta di Credito');

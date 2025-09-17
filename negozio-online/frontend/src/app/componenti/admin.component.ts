@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Prodotto } from '../modelli/prodotto.model';
 import { ProdottoService } from '../servizi/prodotto.service';
+import { OrdineService } from '../servizi/ordine.service';
 
 @Component({
   selector: 'app-admin',
@@ -17,36 +18,36 @@ export class AdminComponent implements OnInit {
   messaggioSuccesso = '';
   messaggioErrore = '';
 
+  fileSelezionato: File | null = null;
+  private readonly backendUrl = 'http://localhost:8080';
+
+  // gestione ordini
+  tuttiOrdini: any[] = [];
+  mostraOrdini = false;
+  caricandoOrdini = false;
+
   constructor(
     private fb: FormBuilder,
-    private servizio: ProdottoService
+    private servizio: ProdottoService,
+    private ordineService: OrdineService
   ) {
     this.formProdotto = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(2)]],
       descrizione: [''],
       prezzo: [0, [Validators.required, Validators.min(0.01)]],
       quantita: [0, [Validators.required, Validators.min(0)]],
-      urlImmagine: [''],
-      categoriaId: [1]
+      categoriaId: [1, Validators.required]
     });
   }
 
   ngOnInit(): void {
-    console.log('Admin component inizializzato');
     this.caricaProdotti();
   }
 
   caricaProdotti(): void {
-    console.log('Caricando lista prodotti per admin...');
     this.servizio.ottieniProdotti().subscribe({
-      next: (prodotti) => {
-        this.elencoProdotti = prodotti;
-        console.log('Prodotti caricati:', prodotti.length);
-      },
-      error: (err) => {
-        console.error('Errore caricamento:', err);
-        this.messaggioErrore = 'Errore nel caricamento dei prodotti';
-      }
+      next: (prodotti) => this.elencoProdotti = prodotti,
+      error: (err) => this.messaggioErrore = 'Errore nel caricamento dei prodotti'
     });
   }
 
@@ -55,104 +56,172 @@ export class AdminComponent implements OnInit {
     if (!this.mostraForm) {
       this.resetForm();
     }
-    console.log('Form mostrato:', this.mostraForm);
   }
 
   modificaProdotto(prodotto: Prodotto): void {
-    console.log('Modificando prodotto:', prodotto.id);
     this.prodottoInModifica = prodotto;
     this.mostraForm = true;
-    
     this.formProdotto.patchValue({
       nome: prodotto.nome,
       descrizione: prodotto.descrizione,
       prezzo: prodotto.prezzo,
       quantita: prodotto.quantita,
-      urlImmagine: prodotto.urlImmagine,
       categoriaId: prodotto.categoriaId
     });
   }
 
-  salvaProdotto(): void {
-    if (this.formProdotto.valid) {
-      const datiProdotto = this.formProdotto.value;
-      console.log('Salvando prodotto:', datiProdotto);
-      
-      if (this.prodottoInModifica) {
-        this.servizio.aggiornaProdotto(this.prodottoInModifica.id, datiProdotto).subscribe({
-          next: (prodotto) => {
-            console.log('Prodotto aggiornato con successo');
-            this.messaggioSuccesso = 'Prodotto aggiornato con successo!';
-            this.caricaProdotti();
-            this.resetForm();
-            this.nascondiMessaggiDopoDelay();
-          },
-          error: (err) => {
-            console.error('Errore aggiornamento:', err);
-            this.messaggioErrore = 'Errore nell\'aggiornamento del prodotto';
-            this.nascondiMessaggiDopoDelay();
-          }
-        });
-      } else {
-        this.servizio.creaProdotto(datiProdotto).subscribe({
-          next: (prodotto) => {
-            console.log('Nuovo prodotto creato:', prodotto.id);
-            this.messaggioSuccesso = 'Prodotto creato con successo!';
-            this.caricaProdotti();
-            this.resetForm();
-            this.nascondiMessaggiDopoDelay();
-          },
-          error: (err) => {
-            console.error('Errore creazione:', err);
-            this.messaggioErrore = 'Errore nella creazione del prodotto';
-            this.nascondiMessaggiDopoDelay();
-          }
-        });
-      }
-    } else {
-      console.log('Form non valido');
-      this.messaggioErrore = 'Compila tutti i campi obbligatori';
-      this.nascondiMessaggiDopoDelay();
+  onFileSelected(event: any): void {
+    if (event.target.files && event.target.files[0]) {
+      this.fileSelezionato = event.target.files[0];
     }
   }
 
-  eliminaProdotto(id: number): void {
-    const conferma = confirm('Sei sicuro di voler eliminare questo prodotto? L\'operazione non può essere annullata.');
-    if (conferma) {
-      console.log('Eliminando prodotto ID:', id);
-      this.servizio.eliminaProdotto(id).subscribe({
-        next: () => {
-          console.log('Prodotto eliminato');
-          this.messaggioSuccesso = 'Prodotto eliminato con successo!';
-          this.caricaProdotti();
-          this.nascondiMessaggiDopoDelay();
+  salvaProdotto(): void {
+    if (!this.formProdotto.valid) {
+      this.messaggioErrore = 'Compila tutti i campi obbligatori';
+      this.nascondiMessaggiDopoDelay();
+      return;
+    }
+    
+    const datiProdotto = this.formProdotto.value;
+    
+    if (this.prodottoInModifica) {
+      this.servizio.aggiornaProdotto(this.prodottoInModifica.id, datiProdotto).subscribe({
+        next: (prodottoAggiornato) => {
+          this.messaggioSuccesso = 'Dati prodotto aggiornati!';
+          if (this.fileSelezionato) {
+            this.caricaImmagine(prodottoAggiornato.id);
+          } else {
+            this.finalizzaOperazione();
+          }
         },
-        error: (err) => {
-          console.error('Errore eliminazione:', err);
-          this.messaggioErrore = 'Errore nell\'eliminazione del prodotto';
-          this.nascondiMessaggiDopoDelay();
-        }
+        error: (err) => this.gestisciErrore(err, 'aggiornamento')
+      });
+    } else {
+      this.servizio.creaProdotto(datiProdotto).subscribe({
+        next: (nuovoProdotto) => {
+          this.messaggioSuccesso = 'Prodotto creato!';
+          if (this.fileSelezionato) {
+            this.caricaImmagine(nuovoProdotto.id);
+          } else {
+            this.finalizzaOperazione();
+          }
+        },
+        error: (err) => this.gestisciErrore(err, 'creazione')
       });
     }
   }
 
+  caricaImmagine(prodottoId: number): void {
+    if (!this.fileSelezionato) return;
+    this.servizio.uploadImmagine(prodottoId, this.fileSelezionato).subscribe({
+      next: () => {
+        this.messaggioSuccesso += ' Immagine caricata!';
+        this.finalizzaOperazione();
+      },
+      error: (err) => this.gestisciErrore(err, 'caricamento immagine')
+    });
+  }
+
+  eliminaProdotto(id: number): void {
+    const conferma = confirm('Sei sicuro di voler eliminare questo prodotto?');
+    if (conferma) {
+      this.servizio.eliminaProdotto(id).subscribe({
+        next: () => {
+          this.messaggioSuccesso = 'Prodotto eliminato con successo!';
+          this.finalizzaOperazione();
+        },
+        error: (err) => this.gestisciErrore(err, 'eliminazione')
+      });
+    }
+  }
+  
+  getUrlImmagine(prodotto: Prodotto): string {
+    if (!prodotto.urlImmagine) return 'assets/immagini/no-image.png'; 
+    if (prodotto.urlImmagine.startsWith('http')) return prodotto.urlImmagine;
+    return `${this.backendUrl}${prodotto.urlImmagine}`;
+  }
+
   resetForm(): void {
-    this.formProdotto.reset();
+    this.formProdotto.reset({ prezzo: 0, quantita: 0, categoriaId: 1 });
     this.prodottoInModifica = null;
     this.mostraForm = false;
-    this.formProdotto.patchValue({
-      prezzo: 0,
-      quantita: 0,
-      categoriaId: 1
-    });
+    this.fileSelezionato = null;
     this.messaggioSuccesso = '';
     this.messaggioErrore = '';
+  } 
+  
+  private finalizzaOperazione(): void {
+    this.caricaProdotti();
+    this.resetForm();
+    this.nascondiMessaggiDopoDelay();
+  }
+
+  private gestisciErrore(err: any, operazione: string): void {
+    this.messaggioErrore = `Errore durante l'operazione di ${operazione}.`;
+    this.nascondiMessaggiDopoDelay();
   }
   
   private nascondiMessaggiDopoDelay(): void {
     setTimeout(() => {
       this.messaggioSuccesso = '';
       this.messaggioErrore = '';
-    }, 3000);
+    }, 4000);
+  }
+
+  // gestione ordini
+  mostraOrdiniAdmin(): void {
+    this.mostraOrdini = !this.mostraOrdini;
+    if (this.mostraOrdini) {
+      this.caricaOrdini();
+    }
+  }
+
+  caricaOrdini(): void {
+    this.caricandoOrdini = true;
+    this.ordineService.getTuttiOrdini().subscribe({
+      next: (ordini) => {
+        this.tuttiOrdini = ordini;
+        this.caricandoOrdini = false;
+      },
+      error: (error) => {
+        console.error('Errore caricamento ordini:', error);
+        this.caricandoOrdini = false;
+      }
+    });
+  }
+
+  cambiaStatoOrdine(ordineId: number, nuovoStato: string): void {
+    this.ordineService.cambiaStatoOrdine(ordineId, nuovoStato).subscribe({
+      next: () => {
+        this.messaggioSuccesso = 'Stato ordine aggiornato!';
+        this.caricaOrdini(); // ricarica la lista
+        this.nascondiMessaggiDopoDelay();
+      },
+      error: (error) => {
+        this.messaggioErrore = 'Errore aggiornamento stato ordine';
+        this.nascondiMessaggiDopoDelay();
+      }
+    });
+  }
+
+  getStatoOrdineColore(stato: string): string {
+    switch (stato) {
+      case 'IN_ATTESA': return 'warning';
+      case 'CONFERMATO': return 'primary';
+      case 'SPEDITO': return 'info';
+      case 'ARRIVATO': return 'success';
+      default: return 'secondary';
+    }
+  }
+
+  getStatoOrdineDescrizione(stato: string): string {
+    switch (stato) {
+      case 'IN_ATTESA': return 'In Attesa';
+      case 'CONFERMATO': return 'Confermato';
+      case 'SPEDITO': return 'Spedito';
+      case 'ARRIVATO': return 'Arrivato';
+      default: return stato;
+    }
   }
 }

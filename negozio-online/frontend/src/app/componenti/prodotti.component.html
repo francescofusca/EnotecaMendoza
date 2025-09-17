@@ -1,43 +1,85 @@
 <div class="contenitore-prodotti">
-  <h2>I nostri prodotti migliori</h2>
+  <div class="header-home">
+    <img src="assets/immagini/logo.png" alt="Enoteca Mendoza Logo" class="logo-home">
+    <p class="slogan">La tradizione vitivinicola italiana nella tua casa</p>
+    <h2 class="titolo-pagina">Tutti i nostri Vini</h2>
+  </div>
   
   <div class="barra-ricerca">
-    <input type="text" placeholder="Cerca prodotti..." [(ngModel)]="testoRicerca" class="input-ricerca">
-    <button (click)="cerca()" class="btn-cerca">Cerca</button>
+      <input type="text" placeholder="Cerca un vino..." [(ngModel)]="testoRicerca" (keyup.enter)="cerca()" class="input-ricerca">
+      <button (click)="cerca()" class="btn-cerca">Cerca</button>
+      <button *ngIf="ricercaAttiva" (click)="resetRicerca()" class="btn-reset">Annulla</button>
   </div>
   
-  <div *ngIf="loading$ | async" class="caricamento">
-    <p>Caricamento in corso...</p>
-  </div>
-  
-  <div class="griglia-prodotti" *ngIf="!(loading$ | async)">
-    <div class="card-prodotto" *ngFor="let prodotto of prodotti$ | async; trackBy: trackByProdotto">
-      <img [src]="getUrlImmagine(prodotto)" [alt]="prodotto.nome" class="immagine-prodotto">
-      
-      <div class="info-prodotto">
-        <h3>{{ prodotto.nome }}</h3>
-        <p class="descrizione">{{ prodotto.descrizione }}</p>
-        <div class="prezzo">€{{ prodotto.prezzo }}</div>
-        
-        <div class="info-stock" *ngIf="prodotto.quantita < 10 && prodotto.quantita > 0">
-          <span class="avviso-stock">Solo {{ prodotto.quantita }} rimasti!</span>
-        </div>
-        
-        <div class="esaurito" *ngIf="prodotto.quantita === 0">
-          ESAURITO
-        </div>
-        
-        <button 
-          class="btn-aggiungi-carrello" 
-          (click)="aggiungiProdottoAlCarrello(prodotto)"
-          [disabled]="prodotto.quantita === 0">
-          {{ prodotto.quantita === 0 ? 'Non disponibile' : 'Aggiungi al carrello' }}
-        </button>
+  <div *ngIf="!ricercaAttiva; else risultatiTemplate">
+      <div *ngFor="let gruppo of categorieRaggruppate$ | async">
+          <section class="sezione-categoria">
+              <div class="header-categoria">
+                  <h3 class="titolo-categoria">{{ gruppo.nome }}</h3>
+                  <a [routerLink]="['/categoria', gruppo.id]" class="link-vedi-tutti">Vedi tutti &rarr;</a>
+              </div>
+              <div class="griglia-prodotti">
+                  <div class="card-prodotto" *ngFor="let prodotto of gruppo.prodotti; trackBy: trackByProdotto">
+                      <a [routerLink]="['/prodotto', prodotto.id]" class="card-link-wrapper">
+                          <img [src]="getUrlImmagine(prodotto)" [alt]="prodotto.nome" class="immagine-prodotto">
+                          <div class="info-prodotto">
+                              <h3>{{ prodotto.nome }}</h3>
+                              <p class="descrizione">{{ prodotto.descrizione }}</p>
+                          </div>
+                      </a>
+                      <div class="info-prodotto-footer">
+                          <div class="prezzo-disponibilita">
+                              <div class="prezzo">€{{ prodotto.prezzo | number:'1.2-2' }}</div>
+                              <div class="disponibilita {{ getClasseDisponibilita(prodotto) }}">
+                                  {{ getTestoDisponibilita(prodotto) }}
+                              </div>
+                          </div>
+                          <button 
+                              class="btn-aggiungi-carrello" 
+                              [disabled]="!isProdottoDisponibile(prodotto)"
+                              (click)="aggiungiProdottoAlCarrello(prodotto)">
+                              {{ isProdottoDisponibile(prodotto) ? 'Aggiungi al carrello' : 'Non disponibile' }}
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </section>
       </div>
-    </div>
   </div>
-  
-  <div *ngIf="(prodotti$ | async)?.length === 0 && !(loading$ | async)" class="nessun-prodotto">
-    <p>Nessun prodotto trovato :(</p>
-  </div>
+
+  <ng-template #risultatiTemplate>
+      <div class="risultati-ricerca">
+          <h3 class="titolo-risultati">Risultati per "{{ testoRicerca }}"</h3>
+          <div *ngIf="risultatiRicerca.length > 0; else nessunaRicerca">
+              <div class="griglia-prodotti">
+                  <div class="card-prodotto" *ngFor="let prodotto of risultatiRicerca; trackBy: trackByProdotto">
+                      <a [routerLink]="['/prodotto', prodotto.id]" class="card-link-wrapper">
+                          <img [src]="getUrlImmagine(prodotto)" [alt]="prodotto.nome" class="immagine-prodotto">
+                          <div class="info-prodotto">
+                              <h3>{{ prodotto.nome }}</h3>
+                              <p class="descrizione">{{ prodotto.descrizione }}</p>
+                          </div>
+                      </a>
+                      <div class="info-prodotto-footer">
+                          <div class="prezzo-disponibilita">
+                              <div class="prezzo">€{{ prodotto.prezzo | number:'1.2-2' }}</div>
+                              <div class="disponibilita {{ getClasseDisponibilita(prodotto) }}">
+                                  {{ getTestoDisponibilita(prodotto) }}
+                              </div>
+                          </div>
+                          <button 
+                              class="btn-aggiungi-carrello" 
+                              [disabled]="!isProdottoDisponibile(prodotto)"
+                              (click)="aggiungiProdottoAlCarrello(prodotto)">
+                              {{ isProdottoDisponibile(prodotto) ? 'Aggiungi al carrello' : 'Non disponibile' }}
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <ng-template #nessunaRicerca>
+              <p class="nessun-risultato">Nessun prodotto trovato per "{{ testoRicerca }}"</p>
+          </ng-template>
+      </div>
+  </ng-template>
 </div>

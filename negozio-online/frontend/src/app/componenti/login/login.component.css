@@ -1,0 +1,114 @@
+/* Container principale per la sezione di autenticazione */
+.contenitore-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 160px);
+}
+
+.form-wrapper {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    border-top: 4px solid #800020;  /* Bordeaux  */
+}
+
+.form-header h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 28px !important;
+    color: #333;
+    font-weight: 600;
+    border: none;
+    padding: 0;
+}
+
+.form-header p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.gruppo-form {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.gruppo-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+}
+
+.gruppo-form input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.gruppo-form input:focus {
+    outline: none;
+    border-color: #800020;
+    box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.1);
+}
+
+/* Bottone di submit */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #800020;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background-color: #66001a;
+    transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+    background-color: #d1d1d1;
+    cursor: not-allowed;
+}
+
+.messaggio-errore {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-left: 4px solid #c0392b;
+}
+
+.link-alternativo {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.link-alternativo a {
+    color: #800020;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-alternativo a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,243 @@
+<div class="contenitore-profilo" *ngIf="utenteCorrente">
+  <!-- Header del Profilo -->
+  <div class="header-profilo">
+    <div class="d-flex align-items-center">
+      <div class="user-avatar me-4">
+        <i class="fas fa-user-circle fa-4x"></i>
+      </div>
+      <div>
+        <h1 class="mb-1">Benvenuto {{utenteCorrente.nome}}!</h1>
+        <p class="mb-0 opacity-75">Gestisci il tuo account e visualizza i tuoi ordini</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards principali -->
+  <div class="row">
+
+    <!-- Card Saldo -->
+    <div class="col-lg-6 mb-4">
+      <div class="card-profilo">
+        <div class="card-header-profilo">
+          <h5 class="mb-0">
+            <i class="fas fa-wallet me-2 text-success"></i>
+            Portafoglio
+          </h5>
+        </div>
+        <div class="card-body p-4">
+          <div class="saldo-display">
+            <span class="saldo-cifra">€{{utenteCorrente.saldo.toFixed(2)}}</span>
+            <small class="d-block opacity-75">Saldo disponibile</small>
+          </div>
+
+          <div class="ricarica-form">
+            <h6 class="mb-3 text-center">Ricarica Saldo</h6>
+            <div class="input-group mb-3">
+              <span class="input-group-text">€</span>
+              <input
+                type="number"
+                class="form-control form-control-profilo"
+                [(ngModel)]="importoRicarica"
+                placeholder="Inserisci importo"
+                min="1"
+                max="1000"
+                step="0.01">
+            </div>
+
+            <button
+              class="btn btn-success-profilo btn-profilo w-100"
+              (click)="ricaricaSaldo()"
+              [disabled]="caricandoRicarica || importoRicarica <= 0">
+              <span *ngIf="caricandoRicarica" class="spinner-border spinner-border-sm me-2"></span>
+              {{caricandoRicarica ? 'Elaborando...' : 'Ricarica Saldo'}}
+            </button>
+
+            <div *ngIf="messaggioRicarica" class="mt-3">
+              <div class="alert"
+                   [class.alert-success]="messaggioRicarica.includes('completata')"
+                   [class.alert-danger]="messaggioRicarica.includes('Errore')"
+                   [class.alert-info]="!messaggioRicarica.includes('completata') && !messaggioRicarica.includes('Errore')">
+                <i class="fas"
+                   [class.fa-check-circle]="messaggioRicarica.includes('completata')"
+                   [class.fa-exclamation-circle]="messaggioRicarica.includes('Errore')"
+                   [class.fa-info-circle]="!messaggioRicarica.includes('completata') && !messaggioRicarica.includes('Errore')"></i>
+                {{messaggioRicarica}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Informazioni Utente -->
+    <div class="col-lg-6 mb-4">
+      <div class="card-profilo">
+        <div class="card-header-profilo">
+          <h5 class="mb-0">
+            <i class="fas fa-user me-2 text-primary"></i>
+            Informazioni Account
+          </h5>
+        </div>
+        <div class="card-body p-4">
+          <div class="info-item">
+            <span class="info-label">Nome completo:</span>
+            <span class="info-value">{{utenteCorrente.nome}} {{utenteCorrente.cognome}}</span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Email:</span>
+            <span class="info-value">{{utenteCorrente.email}}</span>
+          </div>
+
+          <div class="info-item" *ngIf="utenteCorrente.telefono">
+            <span class="info-label">Telefono:</span>
+            <span class="info-value">{{utenteCorrente.telefono}}</span>
+          </div>
+
+          <div class="info-item" *ngIf="utenteCorrente.indirizzo">
+            <span class="info-label">Indirizzo:</span>
+            <span class="info-value">{{utenteCorrente.indirizzo}}</span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Registrato dal:</span>
+            <span class="info-value">{{utenteCorrente.dataCreazione | date:'dd/MM/yyyy'}}</span>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-6">
+              <div class="stat-card">
+                <span class="stat-number">{{ordiniUtente.length}}</span>
+                <span class="stat-label">Ordini Totali</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card">
+                <span class="stat-number">{{utenteCorrente.ruolo}}</span>
+                <span class="stat-label">Tipo Account</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sezione Ordini -->
+  <div class="card-profilo">
+    <div class="card-header-profilo">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="mb-1">
+            <i class="fas fa-shopping-cart me-2 text-warning"></i>
+            I miei ordini
+          </h5>
+          <small class="text-muted">Visualizza e gestisci i tuoi acquisti</small>
+        </div>
+        <div>
+          <button class="btn btn-primary-profilo btn-profilo" (click)="caricaOrdini()">
+            <i class="fas fa-sync-alt me-2"></i>Aggiorna
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body p-4">
+      <!-- Loading -->
+      <div *ngIf="caricandoOrdini" class="text-center py-5">
+        <div class="spinner-border text-primary mb-3" role="status"></div>
+        <p class="text-muted">Caricamento ordini in corso...</p>
+      </div>
+
+      <!-- Nessun ordine -->
+      <div *ngIf="!caricandoOrdini && ordiniUtente.length === 0" class="text-center py-5">
+        <i class="fas fa-shopping-bag fa-4x text-muted mb-3"></i>
+        <h5 class="text-muted">Nessun ordine trovato</h5>
+        <p class="text-muted mb-4">Quando effettuerai il tuo primo acquisto, apparirà qui</p>
+        <a routerLink="/" class="btn btn-primary-profilo btn-profilo">Inizia ad acquistare</a>
+      </div>
+
+      <!-- Lista ordini -->
+      <div *ngIf="!caricandoOrdini && ordiniUtente.length > 0">
+        <div class="row">
+          <div class="col-12" *ngFor="let ordine of ordiniUtente; let i = index">
+            <div class="ordine-card mb-3">
+              <div class="card border">
+                <div class="card-body p-3">
+                  <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-3">
+                      <div class="ordine-numero">
+                        <strong class="text-primary">#{{ordine.id}}</strong>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                      <small class="text-muted d-block">Data ordine</small>
+                      <span class="fw-medium">{{ordine.dataCreazione | date:'dd/MM/yyyy HH:mm'}}</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                      <small class="text-muted d-block">Totale</small>
+                      <span class="fw-bold text-success">€{{ordine.totale.toFixed(2)}}</span>
+                    </div>
+                    <div class="col-lg-3 col-md-2">
+                      <small class="text-muted d-block">Stato</small>
+                      <span class="fw-medium">
+                        {{ordine.stato}}
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Sezione prodotti sempre visibile -->
+                  <div class="mt-3 border-top pt-3">
+                    <h6 class="mb-3 fw-bold">Articoli ordinati:</h6>
+                    <div class="table-responsive">
+                      <table class="table table-sm">
+                        <tbody>
+                          <tr *ngFor="let elemento of ordine.elementiOrdine">
+                            <td class="border-0">
+                              <span class="badge bg-secondary me-2">{{elemento.quantita}}x</span>
+                              <span class="fw-medium">{{elemento.prodotto.nome}}</span>
+                            </td>
+                            <td class="border-0 text-end">
+                              <span class="fw-bold text-success">€{{elemento.prezzo.toFixed(2)}}</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Pulsante conferma arrivo solo se spedito -->
+                    <div *ngIf="ordine.stato === 'SPEDITO'" class="mt-4 pt-3 border-top">
+                      <div class="alert alert-info d-flex justify-content-between align-items-center mb-0">
+                        <div>
+                          <h6 class="mb-1 fw-bold">Ordine in consegna</h6>
+                          <small>Il tuo ordine è stato spedito. Confermalo quando lo ricevi.</small>
+                        </div>
+                        <button class="btn btn-success-profilo btn-profilo"
+                                (click)="confermaArrivo(ordine.id)"
+                                title="Conferma che hai ricevuto l'ordine">
+                          <i class="fas fa-check-circle me-2"></i>Ho ricevuto l'ordine
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Messaggio per utenti non loggati -->
+<div *ngIf="!utenteCorrente" class="contenitore-profilo">
+  <div class="card-profilo">
+    <div class="card-body text-center p-5">
+      <i class="fas fa-lock fa-4x text-muted mb-4"></i>
+      <h3 class="mb-3">Accesso richiesto</h3>
+      <p class="text-muted mb-4">Devi effettuare il login per visualizzare il tuo profilo.</p>
+      <a routerLink="/login" class="btn btn-primary-profilo btn-profilo">Accedi al tuo account</a>
+    </div>
+  </div>
+</div>

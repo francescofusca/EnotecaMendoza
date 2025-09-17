@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   apiUrl: 'https://mio-negozio-api.herokuapp.com/api',
-  appName: 'Il Mio Negozio Online',
+  appName: 'Enoteca Mendoza',
   version: '1.0.0',
   debugMode: false
 };

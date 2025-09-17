@@ -1,0 +1,108 @@
+.contenitore-dettaglio {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.colonna-immagine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.immagine-principale {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 8px;
+}
+.colonna-info {
+  display: flex;
+  flex-direction: column;
+}
+.nome-prodotto {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.descrizione-dettaglio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  flex-grow: 1; /* Spinge l'area acquisto in basso */
+}
+.info-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.disponibilita-dettaglio {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  max-width: 200px;
+}
+
+.disponibilita-dettaglio.disponibile {
+  background-color: #d4edda;
+  color: #155724;
+  border: 2px solid #c3e6cb;
+}
+
+.disponibilita-dettaglio.scorte-basse {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 2px solid #ffeaa7;
+}
+
+.disponibilita-dettaglio.non-disponibile {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+}
+.area-acquisto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+.prezzo-dettaglio {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #800020; /* Rosso Borgogna */
+}
+.btn-acquisto {
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-acquisto:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+.btn-acquisto:hover:not(:disabled) {
+  background-color: #229954;
+}
+.caricamento {
+  text-align: center;
+  padding: 50px;
+}

@@ -1,76 +1,48 @@
 <div class="applicazione">
   <nav class="navbar">
     <div class="contenitore-nav">
-      <a routerLink="/" class="brand-nav" (click)="chiudiMenuMobile()">
-        <h1> {{ titoloApp }}</h1>
-      </a>
       
-      <div class="collegamenti-nav desktop-only">
-        <a routerLink="/" 
-           routerLinkActive="attivo" 
-           [routerLinkActiveOptions]="{exact: true}"
-           class="link-nav">
-           Home
-        </a>
-        <a routerLink="/admin" 
-           routerLinkActive="attivo" 
-           class="link-nav">
-           Gestione
-        </a>
-        <a routerLink="/carrello" 
-           routerLinkActive="attivo" 
-           class="link-carrello">
-          🛒 Carrello
-          <span class="badge-carrello" *ngIf="(conteggioCarrello$ | async) as count">
-              {{ count > 0 ? count : '' }}
-          </span>
+      <ng-container *ngIf="utenteCorrente$ | async as utente; else bloccoNonLoggato">
+        <!-- VISTA PER UTENTE LOGGATO -->
+        <div class="collegamenti-nav-centrali desktop-only">
+          <a routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{exact: true}" class="link-nav">Home</a>
+          <a routerLink="/profilo" routerLinkActive="attivo" class="link-nav">Il mio profilo</a>
+          <a *ngIf="utente.ruolo === 'ADMIN'" routerLink="/admin" routerLinkActive="attivo" class="link-nav">Gestione</a>
+          <a (click)="logout()" class="link-nav link-logout">Logout</a>
+          <a routerLink="/carrello" routerLinkActive="attivo" class="link-carrello">
+            Carrello <span class="badge-carrello" *ngIf="(conteggioCarrello$ | async) as count">{{ count > 0 ? count : '' }}</span>
+          </a>
+          <a routerLink="/contatti" routerLinkActive="attivo" class="link-nav">Contatti</a>
+        </div>
+      </ng-container>
 
-        </a>
-      </div>
+      <ng-template #bloccoNonLoggato>
+        <!-- VISTA PER UTENTE NON LOGGATO -->
+        <div class="collegamenti-nav-centrali desktop-only">
+          <a routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{exact: true}" class="link-nav">Home</a>
+          <a routerLink="/login" routerLinkActive="attivo" class="link-nav">Login</a>
+          <a routerLink="/registrazione" routerLinkActive="attivo" class="link-nav">Registrati</a>
+          <a routerLink="/carrello" routerLinkActive="attivo" class="link-carrello">
+            Carrello <span class="badge-carrello" *ngIf="(conteggioCarrello$ | async) as count">{{ count > 0 ? count : '' }}</span>
+          </a>
+          <a routerLink="/contatti" routerLinkActive="attivo" class="link-nav">Contatti</a>
+        </div>
+      </ng-template>
       
-      <button class="btn-menu-mobile mobile-only" (click)="toggleMenuMobile()">
-        <span [class]="menuMobileAperto ? 'icona-chiudi' : 'icona-menu'">
-          {{ menuMobileAperto ? 'x' : '☰' }}
-        </span>
-      </button>
-    </div>
-    
-    <div class="menu-mobile" [class.aperto]="menuMobileAperto">
-      <a routerLink="/" 
-         routerLinkActive="attivo" 
-         [routerLinkActiveOptions]="{exact: true}"
-         class="link-mobile"
-         (click)="chiudiMenuMobile()">
-         Home
-      </a>
-      <a routerLink="/admin" 
-         routerLinkActive="attivo" 
-         class="link-mobile"
-         (click)="chiudiMenuMobile()">
-         Gestione Prodotti
-      </a>
-      <a routerLink="/carrello" 
-         routerLinkActive="attivo" 
-         class="link-mobile"
-         (click)="chiudiMenuMobile()">
-        🛒 Carrello 
-        <span *ngIf="(conteggioCarrello$ | async) || 0 > 0">
-            ({{ conteggioCarrello$ | async }})
-        </span>      
-      </a>
+      <!-- Mantieni la tua logica per il menu mobile -->
     </div>
   </nav>
+  
+  <!-- Info utente sotto il banner -->
+  <div class="barra-info-utente" *ngIf="utenteCorrente$ | async as utente">
+    <div class="contenitore-info-utente">
+      <span class="info-utente">Benvenuto, {{ utente.nome }}! (Saldo: {{ utente.saldo | number:'1.2-2' }}€)</span>
+    </div>
+  </div>
 
-  <main class="contenuto-principale">
-    <router-outlet></router-outlet>
-  </main>
+  <main class="contenuto-principale"><router-outlet></router-outlet></main>
 
   <footer class="footer">
-    <div class="contenuto-footer">
-      <p>&copy; 2024 {{ titoloApp }}. Progetto universitario - Ingegneria Informatica.</p>
-      <p class="info-footer">
-        <small>Sviluppato usando Angular + Spring Boot + MySQL</small>
-      </p>
-    </div>
+      <p>&copy; 2024 {{ titoloApp }}. Progetto universitario.</p>
   </footer>
 </div>

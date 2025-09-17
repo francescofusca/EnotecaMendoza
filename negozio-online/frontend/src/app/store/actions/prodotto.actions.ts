@@ -24,11 +24,25 @@ export const rimuoviDalCarrello = createAction(
 );
 
 export const aggiornaQuantitaCarrello = createAction(
-  '[Carrello] Aggiorna Quantita',
-  props<{ prodottoId: number; quantita: number }>()
+  '[Carrello] Aggiorna Quantità Prodotto',
+  props<{ 
+    prodottoId: number; 
+    quantita?: number;          //  quantita per incrementare/decrementare (opzionale)
+    quantitaAssoluta?: number; //  quantita per impostare un valore fisso (opzionale)
+  }>()
 );
 
 export const svuotaCarrello = createAction('[Carrello] Svuota Carrello');
+
+export const aggiungiAlCarrelloFallito = createAction(
+  '[Carrello] Aggiungi Al Carrello Fallito',
+  props<{ 
+    prodotto: Prodotto; 
+    quantitaRichiesta: number; 
+    quantitaDisponibile: number;
+    quantitaGiaCarrello?: number;
+  }>()
+);
 
 export const impostaQueryRicerca = createAction(
   '[Prodotto] Imposta Query Ricerca',

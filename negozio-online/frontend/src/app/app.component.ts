@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { AuthService } from './servizi/auth.service';
+import { Utente } from './modelli/utente.model';
 import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
 import { AppState } from './store/app.state';
-import { selezionaConteggioProdottiCarrello } from './store/selectors/prodotto.selectors';
+import { selezionaConteggioProdottiCarrello } from './store/selectors/prodotto.selectors'; // CORRETTO
 
 @Component({
   selector: 'app-root',
@@ -10,29 +12,32 @@ import { selezionaConteggioProdottiCarrello } from './store/selectors/prodotto.s
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
-  titoloApp = 'Il Mio Negozio Online';
+  titoloApp = 'Enoteca Mendoza';
+  utenteCorrente$: Observable<Utente | null>;
   conteggioCarrello$: Observable<number>;
   menuMobileAperto = false;
-  
-  constructor(private store: Store<AppState>) {
-    this.conteggioCarrello$ = this.store.select(selezionaConteggioProdottiCarrello);
-    console.log('App component inizializzato');
+
+  constructor(
+    private authService: AuthService,
+    private store: Store<AppState>
+  ) {
+    this.utenteCorrente$ = this.authService.utenteCorrente$;
+    this.conteggioCarrello$ = this.store.select(selezionaConteggioProdottiCarrello); // CORRETTO
   }
-  
-  ngOnInit(): void {
-    console.log('Applicazione avviata!');
-    
-    this.conteggioCarrello$.subscribe(conteggio => {
-      console.log('Elementi nel carrello:', conteggio);
-    });
+
+  ngOnInit(): void {}
+
+  logout(): void {
+    if (confirm('Sei sicuro di voler effettuare il logout?')) {
+      this.authService.logout();
+      this.chiudiMenuMobile();
+    }
   }
   
   toggleMenuMobile(): void {
     this.menuMobileAperto = !this.menuMobileAperto;
-    console.log('Menu mobile:', this.menuMobileAperto ? 'aperto' : 'chiuso');
   }
-  
+
   chiudiMenuMobile(): void {
     this.menuMobileAperto = false;
   }

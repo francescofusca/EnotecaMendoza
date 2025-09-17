@@ -1,0 +1,30 @@
+<div class="contenitore-dettaglio" *ngIf="prodotto$ | async as prodotto">
+  <div class="colonna-immagine">
+    <img [src]="getUrlImmagine(prodotto)" [alt]="prodotto.nome" class="immagine-principale">
+  </div>
+  <div class="colonna-info">
+    <h1 class="nome-prodotto">{{ prodotto.nome }}</h1>
+    <p class="descrizione-dettaglio">{{ prodotto.descrizione }}</p>
+    
+    <div class="info-extra">
+      <span>Categoria: <strong>Vino Rosso</strong></span> <!-- Da rendere dinamico in futuro -->
+      <div class="disponibilita-dettaglio {{ getClasseDisponibilita(prodotto) }}">
+        {{ getTestoDisponibilita(prodotto) }}
+      </div>
+    </div>
+
+    <div class="area-acquisto">
+      <div class="prezzo-dettaglio">€{{ prodotto.prezzo.toFixed(2) }}</div>
+      <button 
+        class="btn-acquisto" 
+        (click)="aggiungiAlCarrello(prodotto)"
+        [disabled]="!isProdottoDisponibile(prodotto)">
+        {{ isProdottoDisponibile(prodotto) ? 'Aggiungi al Carrello' : 'Non Disponibile' }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!(prodotto$ | async)" class="caricamento">
+  <p>Caricamento prodotto...</p>
+</div>

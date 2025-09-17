@@ -1,129 +1,101 @@
 <div class="contenitore-carrello">
-  <h2> Il tuo Carrello della Spesa</h2>
+  <h2>Il tuo Carrello della Spesa</h2>
   
-  <div *ngIf="(carrello$ | async)?.length === 0" class="carrello-vuoto">
-    <h3>Il tuo carrello è vuoto!</h3>
-    <p>Non hai ancora aggiunto nessun prodotto al carrello.</p>
-    <button class="btn btn-primario grande" (click)="continuaAcquisti()">
-       Inizia a fare shopping
-    </button>
-  </div>
-  
-  <div *ngIf="(carrello$ | async) as carrello" class="contenuto-carrello">
-   <div *ngIf="carrello.length > 0">
-   </div>
-  </div>
-    
-    <div class="sezione-prodotti">
-      <h3> Prodotti nel carrello ({{ (carrello$ | async)?.length }} articoli)</h3>
-      
-      <div class="elemento-carrello" *ngFor="let elemento of carrello$ | async; trackBy: trackByProdotto">
-        <div class="immagine-prodotto">
-          <img [src]="elemento.prodotto.urlImmagine || 'assets/immagini/no-image.png'" 
-               [alt]="elemento.prodotto.nome" class="img-elemento">
-        </div>
+  <div *ngIf="(carrello$ | async) as carrello; else carrelloVuoto">
+    <div *ngIf="carrello.length > 0; else carrelloVuoto" class="contenuto-carrello">
+
+      <div class="sezione-prodotti">
+        <h3>Prodotti nel carrello ({{ carrello.length }} articoli)</h3>
         
-        <div class="dettagli-elemento">
-          <h4>{{ elemento.prodotto.nome }}</h4>
-          <p class="descrizione-elemento">{{ elemento.prodotto.descrizione }}</p>
-          <div class="prezzo-unitario">Prezzo unitario: <strong>€{{ elemento.prodotto.prezzo }}</strong></div>
-        </div>
-        
-        <div class="controlli-quantita">
-          <label>Quantità:</label>
-          <div class="selettore-quantita">
-            <button class="btn-quantita" (click)="diminuisciQuantita(elemento.prodotto.id, elemento.quantita)" title="Diminuisci quantità">
-              
-            </button>
-            <input type="number" 
-                   [value]="elemento.quantita" 
-                   (change)="aggiornaQuantita(elemento.prodotto.id, $any($event.target).value)" 
-                   min="1" 
-                   max="99"
-                   class="input-quantita">
-            <button class="btn-quantita" (click)="aumentaQuantita(elemento.prodotto.id, elemento.quantita)" title="Aumenta quantità">
-              
+        <div class="elemento-carrello" *ngFor="let elemento of carrello; trackBy: trackByProdotto">
+          <div class="immagine-prodotto">
+            <img [src]="getUrlImmagine(elemento.prodotto)" 
+                 [alt]="elemento.prodotto.nome" class="img-elemento">
+          </div>
+          
+          <div class="dettagli-elemento">
+            <h4>{{ elemento.prodotto.nome }}</h4>
+            <p class="descrizione-elemento">{{ elemento.prodotto.descrizione }}</p>
+            <div class="prezzo-unitario">Prezzo unitario: <strong>€{{ elemento.prodotto.prezzo | number:'1.2-2' }}</strong></div>
+          </div>
+          
+          <div class="controlli-quantita">
+            <label>Quantità:</label>
+            <div class="selettore-quantita">
+              <button class="btn-quantita" (click)="diminuisciQuantita(elemento.prodotto.id)">-</button>
+              <input type="number" 
+                     [value]="elemento.quantita" 
+                     (change)="aggiornaQuantita(elemento.prodotto.id, $any($event.target).value)" 
+                     min="1" 
+                     max="99"
+                     class="input-quantita">
+              <button class="btn-quantita" (click)="aumentaQuantita(elemento.prodotto.id)">+</button>
+            </div>
+          </div>
+          
+          <div class="totale-elemento">
+            <div class="sottototale">
+              <strong>€{{ calcolaSottototale(elemento.prodotto.prezzo, elemento.quantita) | number:'1.2-2' }}</strong>
+            </div>
+          </div>
+          
+          <div class="azioni-elemento">
+            <button (click)="rimuoviElemento(elemento.prodotto.id)" class="btn-rimuovi" title="Rimuovi dal carrello">
+               Rimuovi
             </button>
           </div>
         </div>
-        
-        <div class="totale-elemento">
-          <div class="sottototale">
-            <strong>€{{ calcolaSottototale(elemento.prodotto.prezzo, elemento.quantita).toFixed(2) }}</strong>
+      </div>
+      
+      <div class="riepilogo-carrello">
+        <h3>Riepilogo Ordine</h3>
+        <div class="riga-riepilogo">
+          <span>Subtotale:</span>
+          <span class="valore">€{{ (totale$ | async) | number:'1.2-2' }}</span>
+        </div>
+        <div class="riga-riepilogo">
+          <span>Spese di spedizione:</span>
+          <span class="valore gratuito">GRATIS</span>
+        </div>
+        <div class="riga-riepilogo riga-totale">
+          <span><strong>TOTALE:</strong></span>
+          <span class="valore-totale"><strong>€{{ (totale$ | async) | number:'1.2-2' }}</strong></span>
+        </div>
+        <div class="azioni-carrello">
+          <button class="btn btn-secondario" (click)="continuaAcquisti()">Continua lo shopping</button>
+          <button class="btn btn-warning" (click)="svuotaTutto()">Svuota carrello</button>
+          <button class="btn btn-successo grande" (click)="avviaCheckout()" *ngIf="!mostraCheckout">Procedi al Checkout</button>
+        </div>
+      </div>
+      
+      <div class="sezione-checkout" *ngIf="mostraCheckout">
+        <h3>Finalizza il tuo ordine</h3>
+        <div *ngIf="messaggioErrore" class="messaggio-errore">{{ messaggioErrore }}</div>
+        <div class="form-checkout">
+          <div class="campo-form">
+            <label for="indirizzo">Indirizzo di spedizione *:</label>
+            <textarea id="indirizzo" [(ngModel)]="indirizzoSpedizione" rows="3" class="input-indirizzo"></textarea>
+          </div>
+          <div class="campo-form">
+            <label for="pagamento">Metodo di pagamento:</label>
+            <select id="pagamento" [(ngModel)]="metodoPagamento" class="select-pagamento">
+              <option value="carta">Conto virtuale (Saldo: {{ utenteCorrente?.saldo | number:'1.2-2' }}€)</option>
+            </select>
+          </div>
+          <div class="azioni-checkout">
+            <button class="btn btn-secondario" (click)="mostraCheckout = false">Annulla</button>
+            <button class="btn btn-successo grande" (click)="confermaOrdine()">Conferma Ordine - €{{ (totale$ | async) | number:'1.2-2' }}</button>
           </div>
         </div>
-        
-        <div class="azioni-elemento">
-          <button (click)="rimuoviElemento(elemento.prodotto.id)" class="btn-rimuovi" title="Rimuovi dal carrello">
-             Rimuovi
-          </button>
-        </div>
       </div>
     </div>
-    
-    <div class="riepilogo-carrello">
-      <h3> Riepilogo Ordine</h3>
-      
-      <div class="riga-riepilogo">
-        <span>Subtotale:</span>
-        <span class="valore">€{{ (totale$ | async)?.toFixed(2) }}</span>
-      </div>
-      
-      <div class="riga-riepilogo">
-        <span>Spese di spedizione:</span>
-        <span class="valore gratuito">GRATIS</span>
-      </div>
-      
-      <div class="riga-riepilogo riga-totale">
-        <span><strong>TOTALE:</strong></span>
-        <span class="valore-totale"><strong>€{{ (totale$ | async)?.toFixed(2) }}</strong></span>
-      </div>
-      
-      <div class="azioni-carrello">
-        <button class="btn btn-secondario" (click)="continuaAcquisti()">
-           Continua lo shopping
-        </button>
-        <button class="btn btn-warning" (click)="svuotaTutto()">
-          Svuota carrello
-        </button>
-        <button class="btn btn-successo grande" (click)="avviaCheckout()" *ngIf="!mostraCheckout">
-          Procedi al Checkout
-        </button>
-      </div>
-    </div>
-    
-    <div class="sezione-checkout" *ngIf="mostraCheckout">
-      <h3> Finalizza il tuo ordine</h3>
-      
-      <div class="form-checkout">
-        <div class="campo-form">
-          <label for="indirizzo"> Indirizzo di spedizione *:</label>
-          <textarea id="indirizzo" 
-                    [(ngModel)]="indirizzoSpedizione" 
-                    placeholder="Inserisci il tuo indirizzo completo (via, numero civico, cap, città)"
-                    rows="3"
-                    class="input-indirizzo"></textarea>
-        </div>
-        
-        <div class="campo-form">
-          <label for="pagamento"> Metodo di pagamento:</label>
-          <select id="pagamento" [(ngModel)]="metodoPagamento" class="select-pagamento">
-            <option value="carta"> Carta di Credito/Debito</option>
-            <option value="paypal"> PayPal</option>
-            <option value="contrassegno"> Contrassegno (+€2.50)</option>
-            <option value="bonifico"> Bonifico Bancario</option>
-          </select>
-        </div>
-        
-        <div class="azioni-checkout">
-          <button class="btn btn-secondario" (click)="mostraCheckout = false">
-             Annulla
-          </button>
-          <button class="btn btn-successo grande" (click)="confermaOrdine()">
-             Conferma Ordine - €{{ (totale$ | async)?.toFixed(2) }}
-          </button>
-        </div>
-      </div>
-    </div>
-    
   </div>
+
+  <ng-template #carrelloVuoto>
+    <div class="carrello-vuoto">
+      <h3>Il tuo carrello è vuoto!</h3>
+      <p>Non hai ancora aggiunto nessun prodotto al carrello.</p>
+      <button class="btn btn-primario grande" (click)="continuaAcquisti()">Inizia a fare shopping</button>
+    </div>
+  </ng-template>
+</div>

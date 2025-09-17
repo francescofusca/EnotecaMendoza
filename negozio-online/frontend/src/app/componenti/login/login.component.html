@@ -1,0 +1,25 @@
+<div class="contenitore-auth">
+  <div class="form-wrapper">
+    <div class="form-header">
+      <h2>Bentornato!</h2>
+      <p>Accedi al tuo account per continuare.</p>
+    </div>
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <div class="gruppo-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" placeholder="La tua email">
+      </div>
+      <div class="gruppo-form">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" placeholder="La tua password">
+      </div>
+      <div class="messaggio-errore" *ngIf="messaggioErrore">
+        {{ messaggioErrore }}
+      </div>
+      <button type="submit" class="btn-submit" [disabled]="formLogin.invalid">Accedi</button>
+    </form>
+    <div class="link-alternativo">
+      Non hai un account? <a routerLink="/registrazione">Registrati ora</a>
+    </div>
+  </div>
+</div>
