@@ -73,6 +73,7 @@
   color: #ecf0f1;
   border-bottom-color: #e74c3c;
   transform: translateY(-1px);
+  opacity: 1;
 }
 
 .link-carrello {
@@ -120,7 +121,6 @@
 }
 
 .menu-mobile {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -131,6 +131,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  display: none;
 }
 
 .menu-mobile.aperto {
@@ -156,6 +157,10 @@
 
 .link-mobile:last-child {
   border-bottom: none;
+}
+
+.link-logout {
+  cursor: pointer;
 }
 
 .barra-info-utente {
@@ -211,17 +216,20 @@
   font-size: 12px;
 }
 
+/* Tablet e schermi medi */
 @media (max-width: 1024px) {
   .collegamenti-nav-centrali {
-    gap: 25px;
+    gap: 20px;
     margin: 0 10px;
   }
 
   .link-nav, .link-carrello {
     font-size: 15px;
+    padding: 20px 0;
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .collegamenti-nav-centrali {
     display: none;
@@ -251,6 +259,7 @@
   }
 }
 
+/* Smartphone piccoli */
 @media (max-width: 480px) {
   .brand-nav h1 {
     font-size: 18px;
@@ -264,15 +273,8 @@
     font-size: 14px;
   }
 
-  .collegamenti-nav-centrali {
-    gap: 20px;
-  }
-
   .link-mobile {
     padding: 14px 15px;
     font-size: 15px;
   }
-}
-.link-logout {
-  cursor: pointer; /* Rende il link del logout cliccabile */
 }
