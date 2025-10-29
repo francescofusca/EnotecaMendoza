@@ -1,10 +1,12 @@
 <div class="applicazione">
   <nav class="navbar">
     <div class="contenitore-nav">
-      
+      <a routerLink="/" class="brand-nav">
+        <h1>{{ titoloApp }}</h1>
+      </a>
+
       <ng-container *ngIf="utenteCorrente$ | async as utente; else bloccoNonLoggato">
-        <!-- VISTA PER UTENTE LOGGATO -->
-        <div class="collegamenti-nav-centrali desktop-only">
+        <div class="collegamenti-nav-centrali">
           <a routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{exact: true}" class="link-nav">Home</a>
           <a routerLink="/profilo" routerLinkActive="attivo" class="link-nav">Il mio profilo</a>
           <a *ngIf="utente.ruolo === 'ADMIN'" routerLink="/admin" routerLinkActive="attivo" class="link-nav">Gestione</a>
@@ -14,11 +16,14 @@
           </a>
           <a routerLink="/contatti" routerLinkActive="attivo" class="link-nav">Contatti</a>
         </div>
+
+        <button class="btn-menu-mobile" (click)="toggleMenuMobile()">
+          <span class="icona-menu">☰</span>
+        </button>
       </ng-container>
 
       <ng-template #bloccoNonLoggato>
-        <!-- VISTA PER UTENTE NON LOGGATO -->
-        <div class="collegamenti-nav-centrali desktop-only">
+        <div class="collegamenti-nav-centrali">
           <a routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{exact: true}" class="link-nav">Home</a>
           <a routerLink="/login" routerLinkActive="attivo" class="link-nav">Login</a>
           <a routerLink="/registrazione" routerLinkActive="attivo" class="link-nav">Registrati</a>
@@ -27,12 +32,37 @@
           </a>
           <a routerLink="/contatti" routerLinkActive="attivo" class="link-nav">Contatti</a>
         </div>
+
+        <button class="btn-menu-mobile" (click)="toggleMenuMobile()">
+          <span class="icona-menu">☰</span>
+        </button>
       </ng-template>
-      
-      <!-- Mantieni la tua logica per il menu mobile -->
     </div>
+
+    <div class="menu-mobile" [class.aperto]="menuMobileAperto" *ngIf="utenteCorrente$ | async as utente; else menuNonLoggato">
+      <a routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{exact: true}" class="link-mobile" (click)="chiudiMenuMobile()">Home</a>
+      <a routerLink="/profilo" routerLinkActive="attivo" class="link-mobile" (click)="chiudiMenuMobile()">Il mio profilo</a>
+      <a *ngIf="utente.ruolo === 'ADMIN'" routerLink="/admin" routerLinkActive="attivo" class="link-mobile" (click)="chiudiMenuMobile()">Gestione</a>
+      <a (click)="logout(); chiudiMenuMobile()" class="link-mobile link-logout">Logout</a>
+      <a routerLink="/carrello" routerLinkActive="attivo" class="link-mobile" (click)="chiudiMenuMobile()">
+        Carrello <span class="badge-carrello" *ngIf="(conteggioCarrello$ | async) as count">{{ count > 0 ? count : '' }}</span>
+      </a>
+      <a routerLink="/contatti" routerLinkActive="attivo" class="link-mobile" (click)="chiudiMenuMobile()">Contatti</a>
+    </div>
+
+    <ng-template #menuNonLoggato>
+      <div class="menu-mobile" [class.aperto]="menuMobileAperto">
+        <a routerLink="/" routerLinkActive="attivo" [routerLinkActiveOptions]="{exact: true}" class="link-mobile" (click)="chiudiMenuMobile()">Home</a>
+        <a routerLink="/login" routerLinkActive="attivo" class="link-mobile" (click)="chiudiMenuMobile()">Login</a>
+        <a routerLink="/registrazione" routerLinkActive="attivo" class="link-mobile" (click)="chiudiMenuMobile()">Registrati</a>
+        <a routerLink="/carrello" routerLinkActive="attivo" class="link-mobile" (click)="chiudiMenuMobile()">
+          Carrello <span class="badge-carrello" *ngIf="(conteggioCarrello$ | async) as count">{{ count > 0 ? count : '' }}</span>
+        </a>
+        <a routerLink="/contatti" routerLinkActive="attivo" class="link-mobile" (click)="chiudiMenuMobile()">Contatti</a>
+      </div>
+    </ng-template>
   </nav>
-  
+
   <!-- Info utente sotto il banner -->
   <div class="barra-info-utente" *ngIf="utenteCorrente$ | async as utente">
     <div class="contenitore-info-utente">
@@ -40,9 +70,11 @@
     </div>
   </div>
 
-  <main class="contenuto-principale"><router-outlet></router-outlet></main>
+  <main class="contenuto-principale">
+    <router-outlet></router-outlet>
+  </main>
 
   <footer class="footer">
-      <p>&copy; 2024 {{ titoloApp }}. Progetto universitario.</p>
+    <p>&copy; 2024 {{ titoloApp }}. Progetto universitario.</p>
   </footer>
 </div>

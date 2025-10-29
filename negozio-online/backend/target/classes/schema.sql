@@ -17,11 +17,11 @@ CREATE TABLE utenti (
     cognome VARCHAR(100),
     telefono VARCHAR(20),
     indirizzo TEXT,
-    ruolo VARCHAR(10) DEFAULT 'UTENTE', -- VARCHAR è più compatibile con H2 di ENUM
+    ruolo VARCHAR(10) DEFAULT 'UTENTE', -- Nota: VARCHAR è più compatibile con H2 di ENUM
     attivo BOOLEAN DEFAULT TRUE,
     data_creazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     ultimo_accesso TIMESTAMP NULL,
-    saldo DECIMAL(10,2) DEFAULT 1000.00 -- LA RIGA DA AGGIUNGERE/MODIFICARE
+    saldo DECIMAL(10,2) DEFAULT 1000.00 -- <-- LA RIGA DA AGGIUNGERE/MODIFICARE
 );
 
 CREATE TABLE categorie (
