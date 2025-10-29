@@ -5,8 +5,8 @@ com/negozio/servizi/CategoriaService.class
 com/negozio/repository/CategoriaRepository.class
 com/negozio/NegozioApplication.class
 com/negozio/servizi/OrdineService.class
-com/negozio/controller/OrdineController$CambioStatoRequest.class
 com/negozio/controller/AuthController.class
+com/negozio/controller/OrdineController$CambioStatoRequest.class
 com/negozio/controller/CategoriaController.class
 com/negozio/controller/TestController.class
 com/negozio/controller/UtenteController.class

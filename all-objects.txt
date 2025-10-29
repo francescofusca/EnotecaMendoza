@@ -1,0 +1,603 @@
+2311d84157f475320c8fe00ac9d592732b56363f
+0e891e6ffb2c5a066cb8b6c3305afcdc49cb0a40
+6aac53f946e50bda66f7a371a9d835607488f758
+9b797b79ce247cc10bdc4297cc4666e942ca7041
+22f092e8f3bf61ecec1722c67670a020acf6971e
+8546c5899e3bfcee89e607ac0f69a53936181c3a
+684446660149f356241d1e0a70890b494c680c83 
+8d227fc90d27a8ff5eba9e8ebae9441a2aa8769f .DS_Store
+02fd9c86cc36a114839aaeb9d173abdb8d8cc677 .gitignore
+09b9c3940ee47cbaf8cd01f16bab98a45a3cb5f6 .vscode
+e0f15db2eb22b5d618150277e48b741f8fdd277a .vscode/settings.json
+e0ec30be9c51febb59f611c5111879a2b47f4dc0 negozio-online
+1383d41807fff5344ea81d61f0e4b125c87867c8 negozio-online/.gitignore
+1809d3c80b3b33a61a5f2f35c21b7991f6105dbf negozio-online/README.md
+6fe00018881272296041abcc2e09fdc272a112b1 negozio-online/backend
+aebf876604fc5f7f858f434c649f2274033004dc negozio-online/backend/pom.xml
+157559178cd69095d3134abed97f1ab122d38a45 negozio-online/backend/src
+8716373b5eca39fd1a8130167d342e591cea8c18 negozio-online/backend/src/main
+0ba2a73f18513a45e1a34943bbc75c2d629f3203 negozio-online/backend/src/main/java
+6a00b2e45279c07b46f9d2038e0aae2dab629d8d negozio-online/backend/src/main/java/com
+0c4996b4ca34192193f4a9a400c16e598f5db9de negozio-online/backend/src/main/java/com/negozio
+a9b6c84d3ae97d813ee02bffaa13a67706287b0a negozio-online/backend/src/main/java/com/negozio/Controller
+b77fa2f60448241d90f53fda237ab41c54cdf0f2 negozio-online/backend/src/main/java/com/negozio/Controller/AuthController.java
+a1ba4e69595a0de5a5e9e5d5cd2b56b719d414f6 negozio-online/backend/src/main/java/com/negozio/Controller/CategoriaController.java
+6d857d6148ac2e34ad36caac1c810e82002fce5b negozio-online/backend/src/main/java/com/negozio/Controller/DatabaseController.java
+0986c4b99ce41852d65e281c3ec93f840a70b024 negozio-online/backend/src/main/java/com/negozio/Controller/OrdineController.java
+0ac90cfdfd5987c85a082958f6ace0d92399ada7 negozio-online/backend/src/main/java/com/negozio/Controller/ProdottoController.java
+1cd32bf2eff2775782cff6c860a8bd6889d4e534 negozio-online/backend/src/main/java/com/negozio/Controller/TestController.java
+96b06021c759d602ed455a930ba62489e850751b negozio-online/backend/src/main/java/com/negozio/Controller/UtenteController.java
+ce94fd3a1afa06aa9d8b426eca2c0c1cf29e0641 negozio-online/backend/src/main/java/com/negozio/NegozioApplication.java
+96624ae4a6ca59f51781f21ee9d7cefd033f8c31 negozio-online/backend/src/main/java/com/negozio/configurazione
+a32e1c9afbd9e49afaa0ec8ab61a9cbaefb244aa negozio-online/backend/src/main/java/com/negozio/configurazione/ConfigurazioneSicurezza.java
+595cd47dcea6770b4aeb47a44f058a057d9ddc4a negozio-online/backend/src/main/java/com/negozio/entita
+c6ba3259cbabc206a4d3fc9b153e55aa6ac2383a negozio-online/backend/src/main/java/com/negozio/entita/Categoria.java
+6c324502bc899a194c37372794595def55386ed5 negozio-online/backend/src/main/java/com/negozio/entita/ElementoOrdine.java
+ede1eb0af4368a4d8e63ed0a6312a80d5d625f27 negozio-online/backend/src/main/java/com/negozio/entita/Ordine.java
+f4993a6e36e80725f36ed516244dd87ae844c1f0 negozio-online/backend/src/main/java/com/negozio/entita/Prodotto.java
+a6b06ebd06057196d053fc241c9d76461d714aa6 negozio-online/backend/src/main/java/com/negozio/entita/Utente.java
+95e772d31014a8dd4645953bec76a68213a33221 negozio-online/backend/src/main/java/com/negozio/repository
+8176d00e8244ca415475a9339052d2a88f9f8893 negozio-online/backend/src/main/java/com/negozio/repository/CategoriaRepository.java
+1cf33e705fdb1e02fa5a339701f43c5741aaa389 negozio-online/backend/src/main/java/com/negozio/repository/OrdineRepository.java
+a5598873ea4ea8c319a0f8e8a418dd04598dade4 negozio-online/backend/src/main/java/com/negozio/repository/ProdottoRepository.java
+3b434d5c668c7da6ecc4f2bd53107c570254485d negozio-online/backend/src/main/java/com/negozio/repository/UtenteRepository.java
+41aa7807038f16df32ddd038470e1802b72f8db6 negozio-online/backend/src/main/java/com/negozio/servizi
+b43300bb4f2e696dcee13f6d2e65c140d4f8d680 negozio-online/backend/src/main/java/com/negozio/servizi/CategoriaService.java
+daaa7508cbf01827735b62abf082305f377a07d5 negozio-online/backend/src/main/java/com/negozio/servizi/OrdineService.java
+d18070d038ac53e803cafd2cd3b748f559ec4d3f negozio-online/backend/src/main/java/com/negozio/servizi/ProdottoService.java
+c3e1941da95801ac95e0d8e24d4ad9b20a0329c4 negozio-online/backend/src/main/java/com/negozio/servizi/UtenteService.java
+072c321b2d4fb38a3cce7aa9a350a2cbd29b9783 negozio-online/backend/src/main/resources
+72cfac5c258e51e134675960d23353491a4a0085 negozio-online/backend/src/main/resources/application-dev.properties
+3dc9797d3bb11407cd29bba2f62672bb59bcd23c negozio-online/backend/src/main/resources/application-prod.properties
+226710428719857335fc4af180a29a309a0df629 negozio-online/backend/src/main/resources/application.properties
+1d1e45a6d300d2bcefcb54b8ad212ff1e7c5f6f3 negozio-online/backend/src/main/resources/data.sql
+ed38881edb1fb284e44ee892b5c5d4aad3f6774f negozio-online/backend/src/main/resources/schema.sql
+4f321385c0a12f87be87af7cc203744a6bb5390f negozio-online/backend/src/main/resources/static
+3f5fa5643d5d5268c1c452148428781e72afb06f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE
+3cde59f85033eec7972895a10346618167ebba76 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/150_1757595703694.webp
+231709f3ddc07e5e7ec4cd4f880fa7f5a8a5d72d negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/160-anni-calabria-rosso-igt-ippolito.jpg.webp
+70ec7aad39bc4cff29a4d3e5b99161f106f636bc negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/1_1757591287608.webp
+c4f91705806e835c5a2777aa8bad539a59e48b57 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/1_atto-gallery-23.png
+a7d38f6c2c90231169d9190a57ed487e65907166 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/26_1757591366604.jpg
+2cbb0e51a607865b8a81d267b3fa203b8138a66f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/2_1757591328736.webp
+777831e927254e178b0f40bd0e7fdce255c1ecad negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/3_VI40018C_Tancredi-D_G-2018_15-L_Astuccio-1.jpg
+4dd37fec63c1772de8125594216fde29dc956962 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/40_1757595683394.jpg
+e167c460b64f722bf4bee719ae4739977b4e9a50 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/67_1757591425066.jpeg
+6164183c593a27eac6d085ec19074247a1ec35a7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/85_1757591647912.png
+3b55a074267b1913a4dee59813692e6fedd0bc5c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/86_1757591628503.png
+75e06c0981b294513b4bd9702c73be44e3c3594c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Alarico - Terre Nobili_3.png
+c850a91a28d7c3a24758ab4807b7995cef61b4f5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Amarone - Massimago_3.jpg
+529c155b9f1ddaab505471dd17452fcac7b91b3b negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Amarone - Rocca Sveva_2.jpg
+33d2bd4c593cdbec36a9171026efa3cf138671d4 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Amarone - Roccolo Grassi_3.jpg
+2bf13e7257a6cb594f802d394e706e3f6c15fad7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Amarone Gastone - Massimago_3.png
+72ed9cd68f9dd9ca1a97141d96ecd2973214b744 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Appianum - Spiriti Ebbri_2.jpg
+43f84c62d1a7816c0c7b460568cd0ab134f2af4d negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Armacia 375ml - Criserà_2.png
+01a9cfc4b8b427cfee70acf0f1d5f1a798f02cfd negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Artino - Iuzzolini_1.png
+1c16c10608bdb639b13319b5093ceefebb0feb1c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Artino - Iuzzolini_3.png
+d76409e0bda091683d654fb3cfc35b074acf8716 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Asinone - Poliziano_1.jpg
+155b8b95f5a2c062016aa99b18ca283cc244cd81 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Asti - Banfi_2.jpg
+52fa9d230c62abb9944e92549c1006cb1ef3f749 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Barbaresco - Bruno Rocca_3.jpg
+9d969d60ee3eec6a9729e0d4888fa400a72efb87 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Barbaresco - Prunotto_1.png
+f18d7e8396ae976b9b85ed1398424f9c896edb4d negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Barolo - Pio Cesare_2.jpg
+3562942415ae5bf404406ec8ba2839c63f93d61d negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Barolo - Prunotto_2.jpg
+1154c16933a9ec39073c4f346f4f57038eae32f8 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Baronè - Magna Greacia_3.jpg
+b50cf861dc920d20d0c5385d03a404b5db94e0f8 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Ben Rye - Donna Fugata_1.jpg
+0fdb1bc994059d1d3a750b5871edbf866f9253f8 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Blandus - Terre di Balbia_1.png
+c76c98eec60b43554ec0316849e9aa7450fc5684 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Blason Rosè - Perrier-Jouët_3.jpg
+f15502ec6189af51474db9543275ca24cbb2507f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Bolgheri Linda - Rossetti_3.jpg
+3086d19dc70a7eb3d0aaf9df719e66245078e298 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Bonarda - Bisi_1.jpg
+a8dc03fdd7e25fd1930e342f5d5da39c9d7aae61 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Britto - Colacino_1.jpg
+fa3021cce9b4b4847545061f10264fe1ff2928a6 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Brunello - Cencioni_1.jpg
+dfc70d2be15ac4044b93c8334bf46618419dc484 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Brunello Pian delle V. - Antinori_1.jpg
+c64eed536a21c31f31c8f4f8516bc5ec1b7663a8 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Brunello Poggio alle M. - Banfi_2.jpg
+24ce10307fe90cebd514a256281164d833162c06 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Calabrise - Ippolito_1.jpg
+b8d8e28b4e4e033fbf36ac630e75b0a4c7a0f5f2 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Cariglio - Terre Nobili_3.png
+22aefd2bb898bc0e0bb4562eeaaa19234448ca6a negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Casale Vecchio - Fantini_3.jpg
+7e0164b17a20e8f7563ae820707e560275814ecd negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Catà - I Greco_3.jpg
+ab91596347398237fe96d3e8f499ef33ccb847b4 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Cervinago - Agostino Cerchiara_2.jpg
+f1c7673dce6cebb7fbc6e8be5ca77d67bf7d3358 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Chapeaux - Nesci_1.png
+6e581ae150a7da53640af4634d511b52a583724e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Chapeaux - Nesci_3.jpg
+967dcb8d7dd2d83d63246ec0dda19c9ef4439bcf negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Chianti - Banfi_1.jpg
+b48bec057929c888e6c973864c7c4721e54b5507 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Chianti 375ml - Banfi_3.jpg
+5f2f3ada67e9de12c0d3a0d9d3552012aca040bb negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Chianti Gallo Nero - Panaretta_3.jpg
+82056cf765b4c32d3839708427b6cfadede9f500 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Chianti Meme - Petrognano_2.jpg
+f3e1159aa2e23b00d13591a9856e7ea00320d3e2 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Cinque Autoctoni - Fantini_2.jpg
+079260dabec213c3e8580b64c5900b785ababdff negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Cires - Masseria Falvo_2.jpg
+1caa01b99681915238c556871710c5a158dbdc0c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Cirò Etafe - Brigante_2.jpg
+a6dd0ee0ced2f747f8a8f7290e7370abf5d3a54f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Conte Ugo - Antinori_3.jpg
+058cfb822ad0c232936d546b60bfbad42e9d1194 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Critone - Librandi_2.jpg
+eb216e83b2eca0857ebfcdf260effa789efa5f46 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Dattilo - Ceraudo_1.jpg
+c6a60021ebc4febbcb1e074c198bb176565aca20 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Dolcedorme - Ferrocinto_1.jpg
+88c3060ee7d7cc7be39187e0b9f49ae2b2e97e37 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Don Fili - Serracavallo_2.webp
+1b584d55f48e0420969b5c46fea248021faa8861 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Don Rosario - Masseria Falvo_2.jpg
+66a8723847274bdf319e78a5b805d159a84bd15f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Donna Filomena - Masseria Falvo_1.jpg
+203276c939c1ea81a577ab086daeea861b03415a negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Donna Filomena - Masseria Falvo_2.png
+b75121de9d48128328d41a07988ae93a792bc4f0 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Donna Giovanna - Iuzzolini_2.jpg
+ed20f4d517502dce7bce79a31b94e96a5bb54752 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Duca S. Felice - Librandi_2.png
+d3d1b768f34a34ce0bede81fa372795544c71d44 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Eleuteria - Tenute del Travalle_2.jpg
+57a1b1e6f17faaff0efbba59acf40c7bf37851e0 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Estremo - Terre del Gufo_3.jpg
+84db11f27867cc16721d8528caa14c1d621df3b7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Etna Rosso - Donna Fugata_1.webp
+3cb1e094ac7dd755a36f2a07227c3b9a07169fc7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Fermentino - Iuzzolini_1.png
+c06b97dab109ad0c6264f72dbb285995c0e3111c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Fervore - Terre di Balbia_1.webp
+7d00ea5b12b0d3b59595f738a71caca0923cb971 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Fili - Serracavallo_3.jpg
+449079c216e09426b29cd9fe6826f4d0e440154c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Floramundi - Donna Fugata_1.jpg
+e5522db77f2e194b10d6bf1378907712b8cc59ee negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Florus - Banfi_1.png
+a3478ada49847c24c43a1be2765d80fab49bbec5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Fra Antonio - Nesci_1.png
+07dfb1bdc3c043b287ac9ddc7dc3cc20ba94b6c0 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Fralù - Bruno Rocca_3.webp
+20a87dd2614c15248f450aaa09e035312f962ba7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/GB - Odoardi_3.jpg
+12a277d57e4339f252ea3314f4869c64cb370196 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Gaglioppo 375ml - Statti_3.jpg
+fd88c83b550084ba60273fff5d56689b54a850a7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Gaudio Rosso - Magna Greacia_1.jpg
+32123e5bcacc6f5b4bb79f409a352176f3c1d238 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Generated Image September 11, 2025 - 3_59PM.png
+b70d0a753b8153834bc73c096c5bb75785f0d7e2 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Generated_Image_September_11__2025_-_3_59PM-removebg-preview.png
+2ea2844c19edebd69987591215ebc8a248662a8a negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Grand Brut - Perrier-Jouët_3.jpg
+0fdb11f4f6d64040c037e4199439bc9761abf13e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Graneta - Masseria Falvo_2.jpg
+ca06291e7f373735900aefbfb01ef1767e9f970d negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Gravello - Librandi_3.jpg
+833e43be06a2556eeb6f6d74025aa0ed5a3a4ced negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Grayasusi E. R. - Ceraudo_1.jpg
+d5556546f140f4790003898c7731acbe23c4212a negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Greco Nero - Statti_2.png
+24c6206c3762a76e7627aadfc570f3e0a33a1801 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Greco di Bianco - Baccellieri_3.png
+38b4780ec52659007d188d0e3b9d6facc4447434 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Guado al Tasso - Antinori_2.jpg
+15793d61287888158704916e021febb2de05f924 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/I-Monaci-300x300.jpg
+8a55bea3275d1f260a17ab09a7e2018757593735 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Il Bacca - Lucarelli_1.jpg
+eb075d247fc7d026db2ed8d183abe9a357b8ae25 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Il Cabernet - Serragiumenta_2.jpg
+3701162d8741fb9fc3724b1377525a1bf1954228 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Il Pumo - San Marzano_2.png
+d1fed79339ac22a58a0a75ac325794245b49f19e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Il Repertorio - Cantine Del Notaio_2.jpg
+c20e1bd357bd0b1c424776891f556f23df5b5412 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Il Rogito - Cantine Del Notaio_1.jpg
+e979e85d3fa11936d0dd0bd160745d91c01164c5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Jachello - Russo e Longo_2.png
+0e640c25e1e36990862eb1d003068a4837325113 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Kaulos - Terre del Gufo_2.png
+09c91a7a7c288913ac4b7b0489b93a647646795f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/La Firma - Cantine Del Notaio_1.jpg
+6d60061f389c3d68a14f10e35d73cf28b4a8d744 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/La Procura - Cantina Del Notaio_1.jpg
+661dbaf0c5f01df4c3305c61a025271c851cc160 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Lagrein - Tramin_2.jpg
+d9b8b87a20281aeb7c75465d5301279201af04b2 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Lamantino - Agostino Cerchiara_2.png
+dde1bdb11ef06f86c2a2769fd90019b244d02d58 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Le Stanze - Poliziano_2.jpg
+44c6d045cb5b19935311fa37d2d885becc6d541b negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Lepanio - Tenuta del Castello_1.jpg
+ea30d3abd5c3e6f0a761f880c8c3b6eec5958033 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Ligrezza - Terre Di Balbia_1.png
+f2f42e682ca60581f026a4cd2d5838abf28a6e10 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Lumare - Iuzzolini_1.png
+0e4f6ad1ff95f041165b3ff8a7b0fe90233c10b5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Madre Goccia - Iuzzolini_3.png
+cbad88dd2c585d3392885a5e64011469685889fc negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Maglianico - Serragiumenta_2.jpg
+55f734cdc1702dddeff726b8ef935192d7dbf4ed negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Magliocco - Ferrocinto_2.jpg
+c8ea4c71da5597cbe2d645f5dfbecc359ebfbb34 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Magno Megonio - Librandi_1.jpg
+c1c435c878f9d45aac32fc9c98f8b836c44f6dd7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Maradea - Iuzzolini_3.jpg
+bc633b9580c2407bfec6a83dd1ef18499b1b1c3c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Masino - I Greco_2.jpg
+3f8e248c5d3bb98d95929b7ae7338bf7d2bbeb44 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Melissa Jacca Ventu - Pizzuta del Principe_1.jpg
+1498bdac46087a47a552d2dc6ad17de76a31bd8e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Morellino 375ml - Rocca Pesta_1.jpg
+97648e26a59c646cb36acb73a1b621fd72d99133 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Morellino di Scanzano - Poliziano_2.png
+dbad09928656f61da98046744404fa709a9f13a8 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Moscato di Saracena - Viola_1.jpg
+bfb01d8d0f32b725d6b9bff71d5a08ce612dd0a7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Muffato della Sala - Antinori_2.jpg
+d4703c068cb359939595214c70cc2e81a66078d4 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Muller Thurgau - Tramin_2.jpg
+b39453bb4b66d3ace1bbb9bcc533d2f6eeedab28 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Muranera - Iuzzolini_3.jpg
+0a4026b5a47f2535354bef05f570edd0e01dbe33 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Naniha - Tenute Perdarubia_3.jpg
+97a14ed0a43d8d882c30b6b767dcf4aec0b71bfe negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Nanà - Ceraudo_2.png
+0c8f6b017c4adfebe85baae8dc744e1c6cbb401f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Narobio - Tenute del Castello_1.png
+84bb9aba7378df02cc605dcd93302ff1dd3219f7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Nebbiolo Occhietti - Prunotto_1.jpg
+b898ca8bcb4f5a58711eb9a09c810112fa7e954e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Neostos - Spiriti Ebbri_1.jpg
+31aad3de1d6e0a3ee9ad843d9b97c74e5dc43030 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Neostos - Spiriti Ebbri_3.jpg
+a453019ef804c01a9f5554a296565d5bf97ecda5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Nizza Bansella - Prunotto_1.jpg
+d49ae84a394bb338c33655af223f11c22f9aa10f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Opi - Fantini_3.png
+33a2d4c0350b9dc1d7855c0263f98ecfdbf5a1aa negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pass the cookies - Di Lenardo_3.png
+b06a577e35b94b89b1dc2871f6782d3f225cd833 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Passariello - Cantine dei Briganti_2.jpg
+fb8e1ce444bb6649eedda49236d3ffb4cd259598 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Paternum - Iuzzolini_1.jpg
+f87c8b628bf4e9c5787a2b4e7c8e517d5a520ae7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pecorello - Ferrocinto_2.jpg
+22a395a73d235da80716bf3a650499f57609fa49 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pellefrino-Marsala-dolde-Garibaldi.jpg
+15b6feb91bca18c108625edc0bb4a1e2cdce9190 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pesca Nera - Ippolito_2.jpg
+fe9c7a6a8a7d65e7d583213569c57e96688839f4 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Petelia - Ceraudo_1.jpg
+a5c43257ebc75d5420f5266d5b201c246d44dfbe negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Petraro - Ceraudo_2.jpg
+7895192b8117fdfb839f89b695498fd0c9e4c761 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Petrognano Riserva - Petrognano_3.jpg
+87471b428ee94e02162b943006991adea00710ab negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pian delle Rose - Tenute del Castello_3.jpg
+e80faae817ba6fec1992f880fa2b00a057af6109 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pinot Bianco - Tramin_3.jpg
+ddbd6693edb78ef1dca0601720de44edd80538c4 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pinot Nero - Falkestein_1.jpg
+b1fc131d5be5d1c6b734678397e60357a333a794 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pinot Nero - Tramin_3.jpg
+1d187feb9faf463dc5902457256b87e5dde832a2 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pinot Nero 375ml - Tramin_2.jpg
+db55da0a88fa848e85a5f4fdeece032927f3ad39 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pircoca - Masseria Falvo_1.jpg
+30d8003720ea07e484cf126b6015c170ad0de4fb negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pollino Riserva - Ferrocinto_1.jpg
+1d94c2e57899e0698ec2b15f95ab9d201e6482a0 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pollino Rosato - Ferrocinto_1.jpg
+c8d91f5413442fd8a1e4bb11cbc0cf0e0d6a2268 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Pollino Rosso - Ferrocinto_1.jpg
+3ddc4142acf1f230b32ca8f929d2b55c72dfd0b6 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Portapiana - Terre del Gufo_1.png
+ac7cc8b86ba4bbda6749cc9c4b6f19a42f4e38aa negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Prima Fila - Iuzzolini_2.png
+0b104008343aa69caf49fcd29b949d9cdbf9cfa5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Primitivo Dolce - Vignaioli del Salento_3.jpg
+b8ed53446c372fa606ce1ab89d480d5c716050cd negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Primitivo di Manduria - Zolla_3.jpg
+05d2d2102fbc42526e7dbf4034cb884cd4a5cd62 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Principe Spinelli - Iuzzolini_2.jpg
+85c481be2664b39991b9b6c6a07d3ae5de60b25a negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Prosecco Bandarossa 375ml - Bortolomiol_1.webp
+6e2966d74f4ed0cb274136a78968fd435cacd882 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Prosecco Cartize - Bortolomiol_3.jpg
+b9bd27b9622ed259c18f1eaef28aff423cce8b7c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Prosecco Miol - Bortolomiol_2.jpg
+a32336920718e8777b8aebab52d3aa39dd18960e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Prosecco Prior Brut - Bortolomiol_2.png
+a716512dbf2decde3254c944bc207957f3bdcb6f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Quattro Lustri - Serracavallo_1.jpg
+43719bcb39520d43c4973fcdbee51cba8025e50e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Recioto di Soave - Rocca Sveva_1.png
+926948db805035d6b3ccc3e86abda33e02c27a62 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Ribolla Gialla - Di Lenardo_2.jpg
+12144dd6ff51ed5e62c9fbaffc5fb20288fed76d negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Rinni - Cantine Viola_1.png
+2d1cbc2e859e31648ae405ffc7c4cd6417873884 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Ripasso - Rocca Sveva_2.jpg
+6f94f866db7f32890e0d9059c12cfe3f465de4ca negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Ripasso MariaBella - Massimago_3.png
+87479c80e814ce1322eea1a1c999a3149816e49c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Ripe del Falco - Ippolito_2.jpg
+34602eba88ee64bab4634ef287c99bb8bc6af261 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Rosso Montalcino - Banfi_3.jpg
+c84e4e2af752dfdb3d437811285f1d6f5793ad26 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Rosso Montalcino - Cencioni_1.jpg
+819526dbe82be86dc559ae0b64b0f3f7ec83be36 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Rosso Montepulciano - Poliziano_1.png
+af4ae3eda0dba097bff9e7685451b18dbf142fc3 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Rosso Viola - Cantine Viola_1.png
+39b97a1d6366edda7e665a85b5b087e53d3a4603 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Rosso di Montepulciano 375ml - Poliziano_2.jpg
+f74041d922a101944abf6fd7d24476a6380f6470 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/S. Cristina 375ml - Antinori_1.png
+dbe88632900d10a3f291b09edb22651cf626048b negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Sagrantino RC2 - Falesco_1.jpg
+7d3be1cd6f3464934f4fd90e119fb4972949ba83 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Santa Cristina - Antinori_3.png
+985a36069543f25bf67f2d23b875a8c443a06646 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Santa chiara - Terre Nobili_1.jpg
+14616593ce9dbae4bcf588a8c98b904c83399bac negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Savu - I Greco_2.jpg
+b939a1eae0a09f19125b3ed4b084cf5fc7bba934 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Scalabrone - Antinori_2.png
+63950893c1c53a5c3711109edf40b1c84904e417 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Sedarà - Donna Fugata_2.jpg
+abef000f49c6a726a8c1aae196f1933bab151e13 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Sedarà 375ml - Donna Fugata_3.png
+1603b5638bd954a464955b2a57ef4e71e84b43ce negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Serra delle Ciavole - Ferrocinto_1.jpg
+3be1bb715ad28d720683deb1de717468cb793e44 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Sessantanni - S.Marzano_1.png
+3da58cb1d374215b42c377d5b72b828125aa059d negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Sette Chiese - Serracavallo_1.png
+ae6c3a4af6ca64f0e85131c80fadcab841d58131 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Solaia - Antinori_3.jpg
+b31196ab97dca2526cf9bd85c430be1649f197d6 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Soprano dello Ionio - Tenute del Castello_3.jpg
+7c91f57f01ad1935f54ce1ed7957503ffbb20792 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Stil Novo - Banfi_3.png
+4a127750d4b6dd080c1b82ff727edbe999170e61 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Susumaniello - Zolla_1.jpg
+0a8e7eeeb265e1f4a63bad9501cebad057e3a17a negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/TELOS-AMARONE.png
+9f17fa8c73e07e6c7c3f87bd089291fc3f7c2f64 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/TENUTA-SANT-ANTONIO-VALPOLICELLA-MONTI-GARBI.png
+99bef57ab860a650c4078d2d8b9bc0a8ffce205b negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Talò - S. Marzano_1.jpg
+548cb351e2bed08624057ef2df5c113c204c4194 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Taurasi - Vesevo_3.jpg
+c7b52e379f3bd84d6418d7806fff311cb31a1ff0 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Teodora - Terre Nobili_3.jpg
+2783b45d0d45561869179b40795c7092d129f78f negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Teodora_Tenuta_Terre_Nobili-1.jpg
+f093903981fc61dbf58325bf93d82ea70daa47a7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Terra da Mia - Odoardi_1.png
+b79bf816d79a3e45543a968b53a97f3e95efd61b negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Terraccia - Serracavallo_2.jpg
+12cbff4f6861ce1035469efa6d2b35de2034af64 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Terre Lontane - Librandi_1.jpg
+6f36129fbaa2d56b935bc3396c09b7414ad6996c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Three Dreamers - Fantini_2.jpg
+683085a2e3a7082392a4d14f2fdd13375195d7df negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Tignanello - Antinori_2.jpg
+5259fecb14a98f4543f0808d0e9ab4e5617670fe negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Timpa del Principe 375ml - Ferrocinto_3.png
+0df18c4d139a673656d30dc659a97f3bbc1abb74 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Timpamara - Terre del Gufo_3.jpg
+ea96a06da200f0232a9177da1e21ea8332f2f1a7 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Tramari - San Marzano_2.webp
+c216b4ab22be230682901cacdf59962ebf205d44 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Tumàsino - I Greco_3.png
+739da84fdcaa8435d24c108e4e8533e95ea45529 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Vigna Cantaghel - Maso Cantaghel_3.jpg
+12706f1840515f056f7673f7f99b42b871eb69ec negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Vigna Savuco - Serracavallo_1.png
+a6eb3469f8d05c3fe4b32264baf5ded9ac64ade1 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Vin Santo - Antinori_1.jpg
+50732a3d953008c57bc25e28db0b2c2798cf1f9b negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Vin Santo - Poliziano_2.jpg
+e0e8fbcc15228128836abb12d27aecdc99e3db96 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Virgani - Russo e Longo_1.jpg
+47ef56ce0c89ecda93eab7f47e6723890da1f711 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Zero (solfiti) - Pipoli_1.jpg
+eed51c0caf97580a2d36f0e7cec25292ee56be0c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Zero 1l. - Brigante_3.jpg
+5307c9fd61ad6ccd67301be4f4d0fc160062fe0e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/Zingamaro - Pizzuta del Principe_1.jpg
+772976ee5e5ab9961731e15b9e05277127c7f781 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/aglianico-terradeclano-quintodecimo-winedoor_1.webp
+988b7466c523f0477519f48671fc9eee43621d42 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/bell-assai-donnafugata.jpg.png
+4d7dab55211da5e6f72def9eaa07ff89d5d879ac negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/ca-del-bosco-mezza-300x300.jpg
+62bb586d8a3c4cc929728ae628504531092d41dd negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/ciro-doc-rosato-manyari.jpg.png
+f800776cdd55a316f258247df41ac97c14fe97c5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/colli-di-ginestra-calabria-igp-rosato-russo-longo-2023.jpg
+17d85af5f9d30f35125d8ea352bf873d8578fa89 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/corte-del-lupo-ca-del-bosco-2019-2.jpg
+7805b0f12fe198c5052785773e4fdb4d13c787b5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/cuordilava-donnafugata-dolce-e-gabbana-etna-rosso-doc-2019-collezione-vini-dg.jpg
+c866f8ca82b15acadb37822f2ca77a8f6ba96de5 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/dolcedorme-ferrocinto.jpg.webp
+effb35c81d6b87f075b785746b1240c5b340c076 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/fattoria-di-petrognano-noisy-sirah-toscana-igt-rosso.jpg
+fdb11fab0f038288b7c9403dc02832b3a5c28a41 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/franciacorta-extra-brut-vintage-collection-2019-75-cl-ca-del-bosco.jpg
+5677cdfe1cc0f743fe92196fb433985df50696af negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/franciacorta-millesimato-2020-brut-saten-ca-del-bosco.jpg
+da9c918bbf4d8cf3762c81eeed1ab4850fb89f33 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/gaudio-rosato-calabria-igp-2023-magna-graecia.jpg.webp
+266d575e3a2841def8205a70c7ff36491dbf16d6 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/images-3.jpeg
+1ab90d8e14b07081822b5b4a60aad2ba35a47474 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/images-5.jpeg
+f41cd975c730a89bc5c5d188170d05757ca2e12c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/images-6.jpeg
+b695397b428c202fe15b1c6b2a458d4d63a0576c negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/images-7.jpeg
+8bdaf821fbb9c584da5e70e91a36bf38f0244ce1 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/images-8.jpeg
+00aafa4992b4d02786a404ccb8e2fad330d889d6 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/images-9.jpeg
+daeeb959e7caf3d142ab0e6514ff18da1140ef37 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/placeholder.jpg
+f8167aad100fd292d88933a5a4130a8af28b2e0e negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/st-pauls-lagrein-rosso-mezza-bottiglia.jpg.webp
+f4dd5053c5ce89b2828dfaa108f33026142f8064 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE/valdobbiadene-prosecco-superiore-extra-dry-millesimato-bandarossa-docg_13713.jpg
+98b6c0fc33c83f4ec4f14a27b701e99259dca7d7 negozio-online/backend/src/main/test
+d36218ae05d19b53066ccde571869dc7e8af7ca3 negozio-online/backend/src/main/test/java
+7337818b47e5ef2ca54a27e3d8521b0f8fe8cde3 negozio-online/backend/src/main/test/java/com
+003a5677b1eda0e0a13c14196432ae5673c7be14 negozio-online/backend/src/main/test/java/com/negozio
+559bb1fa2baa8b1a54c1b75366111ddd760704dc negozio-online/backend/src/main/test/java/com/negozio/NegozioApplicationTests.java
+5ca40f1e3db8509f4c41bd5ba0e63eea6591f55f negozio-online/backend/target
+e6187affa470bb463dafb93b845da1977f3b3fd8 negozio-online/backend/target/classes
+f01e2e88aad7c67bb80f2ec3f95f6f5dc0e6cc76 negozio-online/backend/target/classes/META-INF
+1a3556229cbe6aa8d39cd8e954b09204a4a41fc7 negozio-online/backend/target/classes/META-INF/build-info.properties
+9f4757e863f9bd1fce2852a68c9e4ec582fa7d4f negozio-online/backend/target/classes/com
+16f151b38be8045dfd20f5e5da37aada7dfcd695 negozio-online/backend/target/classes/com/negozio
+e1ce70cb1e0e4c551a655044baa1c98473264999 negozio-online/backend/target/classes/com/negozio/NegozioApplication.class
+3a34623dbc25aa45e59db3ce5b17878c062571d1 negozio-online/backend/target/classes/com/negozio/configurazione
+398c85408243aa61952914ab3af896da330425c4 negozio-online/backend/target/classes/com/negozio/configurazione/ConfigurazioneSicurezza.class
+b8824d7591a1e159568d3af177ecea589b339bc8 negozio-online/backend/target/classes/com/negozio/controller
+52dd66eea734de7a7e3bef511b6761684b41fee1 negozio-online/backend/target/classes/com/negozio/controller/AuthController.class
+faa3d098665620905634a8f7042361c7233c1497 negozio-online/backend/target/classes/com/negozio/controller/CategoriaController.class
+17562040e7830680e94e4b8a6be26dee0023d8d7 negozio-online/backend/target/classes/com/negozio/controller/DatabaseController.class
+0849e00d4471887041e335664e2fdb5c4c71f82c negozio-online/backend/target/classes/com/negozio/controller/LoginRequest.class
+2bd1c44bc4e4bc2b960558f6c7c6f730dbafecfd negozio-online/backend/target/classes/com/negozio/controller/OrdineController$CambioStatoRequest.class
+998cf55b6e55d047a5c2996e92e829c37f061430 negozio-online/backend/target/classes/com/negozio/controller/OrdineController.class
+291ee655825644294a0849d8efe581067378c42e negozio-online/backend/target/classes/com/negozio/controller/ProdottoController.class
+9ff447e4f6c561093ec5043d215f69a566cecf5f negozio-online/backend/target/classes/com/negozio/controller/TestController.class
+eafc638c8ec20d487f96699713b56d28979c92da negozio-online/backend/target/classes/com/negozio/controller/UtenteController$RicaricaRequest.class
+4f91dfcbe5744d959143eca09d80a2f48a0ea31d negozio-online/backend/target/classes/com/negozio/controller/UtenteController.class
+ea78f42ffd10e99c0717109094d5d93b1bef8f25 negozio-online/backend/target/classes/com/negozio/entita
+9977f102848cc98b4a60be534455a565742ef5ef negozio-online/backend/target/classes/com/negozio/entita/Categoria.class
+62d25480b506006bcaf1530c25a74ddaac10e813 negozio-online/backend/target/classes/com/negozio/entita/ElementoOrdine.class
+10fa9f0106aa5c9905cfe9f8b102f6e8412f897a negozio-online/backend/target/classes/com/negozio/entita/Ordine$StatoOrdine.class
+e3642fcb80441e3b1cb91de1c05083502d63cc25 negozio-online/backend/target/classes/com/negozio/entita/Ordine.class
+535746cd5c56bea9cef497b4ef84dc56a4ba63ba negozio-online/backend/target/classes/com/negozio/entita/Prodotto.class
+670153fc233c02aed0b557d88e6b0595b5fa6260 negozio-online/backend/target/classes/com/negozio/entita/Utente$RuoloUtente.class
+613e5c3dc2b24a45e2b4a4f955622e6c412b39bc negozio-online/backend/target/classes/com/negozio/entita/Utente.class
+ce4a94bbedd9c0a16402633bad88b57d678c4f07 negozio-online/backend/target/classes/com/negozio/repository
+c0d6f0d84537a625f969904422d702ebc7bd4776 negozio-online/backend/target/classes/com/negozio/repository/CategoriaRepository.class
+cebadd4a76c7ee4b75665f59e5aceba3da34db53 negozio-online/backend/target/classes/com/negozio/repository/OrdineRepository.class
+f6716ffd08d29076092f0a82fe3ff7ef169f246a negozio-online/backend/target/classes/com/negozio/repository/ProdottoRepository.class
+2c0fbcb898b45b922eeec8908be3218bcd9f2288 negozio-online/backend/target/classes/com/negozio/repository/UtenteRepository.class
+073526170c75ba05c43c499b57328f1e2ad953b7 negozio-online/backend/target/classes/com/negozio/servizi
+48826cb8b9ffb5c6b09cbb7781acf2e014a93fd0 negozio-online/backend/target/classes/com/negozio/servizi/CategoriaService.class
+f4d3b5c0a757ed52457a80c1b77473ff7c1ee5b9 negozio-online/backend/target/classes/com/negozio/servizi/OrdineService.class
+835e1731ef619ddd315541f5301e0e2d3e97e99d negozio-online/backend/target/classes/com/negozio/servizi/ProdottoService.class
+cf5e1df0564a003602d598fc4d9795d4055b16d1 negozio-online/backend/target/classes/com/negozio/servizi/UtenteService.class
+5661937f78a7ebd245dc4f436c453d12a87711c3 negozio-online/backend/target/maven-archiver
+06e877779e2a4fb9c4b82e529b8fe7a4446b935a negozio-online/backend/target/maven-archiver/pom.properties
+c1400a30f5aff5c2463dc70cff4e3e9254636138 negozio-online/backend/target/maven-status
+58554aea1c722b975113084eaee5c7eb83c0a635 negozio-online/backend/target/maven-status/maven-compiler-plugin
+725332215cc042b1df5128098652129a01bc0100 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile
+76e24211b78bba5da3eeca62aca8cb6ca5326235 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile
+3f30afb365779e5328fa9b01a267362273156268 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+96f35e7446096eac40204c3d67df6192090753bb negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+6092deb3ecc32da214354c6c97b08d6ecfade2b5 negozio-online/backend/target/negozio-online-backend-1.0.0.jar
+f89d925660e034bab75ad0fa07b7219833dfe38d negozio-online/backend/target/negozio-online-backend-1.0.0.jar.original
+82a382ed288ca313195853e12ef9c512b0f2f4c9 negozio-online/frontend
+db7062b0ce76563275a896477d5f2ca1fcc28a43 negozio-online/frontend/.gitignore
+060b948207e10ac0119b1ba71e12b7cc6d6d655c negozio-online/frontend/angular.json
+27ac6af322271eebe5ff2841997460feca69d247 negozio-online/frontend/package-lock.json
+ffa402319b500c03b243177b85d9e57893a4f91f negozio-online/frontend/package.json
+e1b644ddaf0de6998e65391e05d6ebab94c8b43e negozio-online/frontend/src
+81a70116765fc2a127cdacdda8563549e01adf11 negozio-online/frontend/src/app
+9d3d339b781439be7c74d9618b6ceb0172cb3e85 negozio-online/frontend/src/app/app.component.css
+dc542e7659d6eb47d91b5ad14e7056e8535b07aa negozio-online/frontend/src/app/app.component.html
+1d4174e5a9ffa4299c7579b0fbac6cc082d263bc negozio-online/frontend/src/app/app.component.ts
+3d88c27824934339f90642eb685c0534b59aea88 negozio-online/frontend/src/app/app.module.ts
+ee496312797396ed85fe210c495094851b8fc890 negozio-online/frontend/src/app/componenti
+2257aa6026a2b020468ad169958e080f1ec1da51 negozio-online/frontend/src/app/componenti/admin.component.css
+ecf35e02774bb156f2170ef4b6b012156fa541ea negozio-online/frontend/src/app/componenti/admin.component.html
+4f0551ae57fee7d6de9c34355780acd14ea7ef15 negozio-online/frontend/src/app/componenti/admin.component.ts
+4b1fd95ade5f246b6ab4c13f97256ac2d5d4c6a7 negozio-online/frontend/src/app/componenti/carrello.component.css
+7d8d0aaa3fffb691ed6ce1189d5a1840e88743d3 negozio-online/frontend/src/app/componenti/carrello.component.html
+6842c9c1696d23671aef8bd878e25ec47e7a04b9 negozio-online/frontend/src/app/componenti/carrello.component.ts
+d1817c5de6d450cf829681b538c0a9cbfd222a4d negozio-online/frontend/src/app/componenti/categoria-prodotti
+a89cbb85ea33eea8d96a9c7500052c98c6d8f58c negozio-online/frontend/src/app/componenti/categoria-prodotti/categoria-prodotti.component.css
+1ac14adf05ef83fdd72fb75574198240dede4b1c negozio-online/frontend/src/app/componenti/categoria-prodotti/categoria-prodotti.component.html
+50b56d461283416f536753140fb2bde980d18c04 negozio-online/frontend/src/app/componenti/categoria-prodotti/categoria-prodotti.component.spec.ts
+93f4258d70b9ae2249a18e84aa36fe56ddf31590 negozio-online/frontend/src/app/componenti/categoria-prodotti/categoria-prodotti.component.ts
+09b7c3913ef6a565314f3e1b4a78908a58b81557 negozio-online/frontend/src/app/componenti/contatti
+31ad4a078c5db7c10ebaeacc795d8dc634b5c688 negozio-online/frontend/src/app/componenti/contatti/contatti.component.css
+353f307a0d8135cad50c4a3edcdb7d98b54d290e negozio-online/frontend/src/app/componenti/contatti/contatti.component.html
+ff105adb682c86a61c9a5203a44fb173d33d59c7 negozio-online/frontend/src/app/componenti/contatti/contatti.component.ts
+35b502fc664260ae7c6f0e4d5a5890d64c29d6fd negozio-online/frontend/src/app/componenti/dettaglio-prodotto
+9b1adbf70201e675712e635c433a25d1edbf2fdf negozio-online/frontend/src/app/componenti/dettaglio-prodotto/dettaglio-prodotto.component.css
+88413df1e636782fe499ff5282b0f962774be0e5 negozio-online/frontend/src/app/componenti/dettaglio-prodotto/dettaglio-prodotto.component.html
+a8d69769a80f052c5955245bfa1b6d7a7ad11fae negozio-online/frontend/src/app/componenti/dettaglio-prodotto/dettaglio-prodotto.component.spec.ts
+c3eb308d95ea68cbd61aff9cb9b8b8f26948b9c2 negozio-online/frontend/src/app/componenti/dettaglio-prodotto/dettaglio-prodotto.component.ts
+3843c8acb0207016eff4660c84a8dfa5a100817d negozio-online/frontend/src/app/componenti/login
+62136b133ba79463927ddb17b75ff7f301b5e7b3 negozio-online/frontend/src/app/componenti/login/login.component.css
+3a38134efe6fa53d580c4eb61f8f816064f3699b negozio-online/frontend/src/app/componenti/login/login.component.html
+10eca249d528f4bcf8ef434696978a242a03e487 negozio-online/frontend/src/app/componenti/login/login.component.spec.ts
+45df23d95fce6b975e6a7a40b7cb7b5a461eafa7 negozio-online/frontend/src/app/componenti/login/login.component.ts
+dc2dfe57e04bd5d52be1097b0d2907da3929df7e negozio-online/frontend/src/app/componenti/prodotti.component.css
+ae4d2e433aafe4eab17bd4f12a22676a085212cc negozio-online/frontend/src/app/componenti/prodotti.component.html
+bc5a147b878b79ef11ea05e94065b8864ae040a2 negozio-online/frontend/src/app/componenti/prodotti.component.ts
+68e3ec9742d616fd1aba3eea5ba00b5e7c37ac02 negozio-online/frontend/src/app/componenti/profilo
+ff7c0fa68559f319b3507c6f332a7c9ff5858144 negozio-online/frontend/src/app/componenti/profilo/profilo.component.css
+51873f307dc8142820c8239a878600f105a23e70 negozio-online/frontend/src/app/componenti/profilo/profilo.component.html
+8d1205e58da1ebc7897931263d8060210289c9e4 negozio-online/frontend/src/app/componenti/profilo/profilo.component.ts
+a659ab46fe53c5ce6ff9053dd3a34d3c68764761 negozio-online/frontend/src/app/componenti/registrazione
+78327b45faddd0b41592bb45fda618070d1a782b negozio-online/frontend/src/app/componenti/registrazione/registrazione.component.css
+39ebde2a226249b3e2c39f542c0b14231301ee7a negozio-online/frontend/src/app/componenti/registrazione/registrazione.component.html
+5933ba0a33895bc3ca60d34e33945ba41d6ca1ca negozio-online/frontend/src/app/componenti/registrazione/registrazione.component.spec.ts
+9f6cdb4c79d7694c60b18e92bea2788317b1ae2c negozio-online/frontend/src/app/componenti/registrazione/registrazione.component.ts
+e2ce806d2eece226f8b53cb7d488eac31cd6dc78 negozio-online/frontend/src/app/modelli
+d02d2eade6eab158a05c2ff937cd502d65e0e6cb negozio-online/frontend/src/app/modelli/elemento-carrello.model.ts
+dab00d30e53b56523917856a4a0e71dbb0fac5e8 negozio-online/frontend/src/app/modelli/prodotto.model.ts
+8fbaafabe3bbb8d0d447f887e3f344a635751012 negozio-online/frontend/src/app/modelli/utente.model.ts
+611f23bf859961b9dc2fc21251731746ef248033 negozio-online/frontend/src/app/servizi
+68889d22d920e3b78febae9e5d323c717887961e negozio-online/frontend/src/app/servizi/auth.guard.spec.ts
+cd37c87145e9f5306a2451d903cc6ee2236a79a8 negozio-online/frontend/src/app/servizi/auth.guard.ts
+4ba6fe498884ccc5265231d7e5c5201370d7df06 negozio-online/frontend/src/app/servizi/auth.interceptor.ts
+f1251cacf9dda3b3bd9dc5222583fafa110ffe8f negozio-online/frontend/src/app/servizi/auth.service.spec.ts
+4bd512c720b2fa780edb41e65988ac99dbcde7f6 negozio-online/frontend/src/app/servizi/auth.service.ts
+6c9328eb6b7ad35ecf0f57090e27ee8bd654f607 negozio-online/frontend/src/app/servizi/ordine.service.ts
+74086b920a949b5b90c10219d220697f3f054ec9 negozio-online/frontend/src/app/servizi/prodotto.service.ts
+18075591704f11e90c8267424c23fa85c3623a16 negozio-online/frontend/src/app/servizi/utente.service.spec.ts
+0911b76492465a7c472a9b22f67f379ebcb74259 negozio-online/frontend/src/app/servizi/utente.service.ts
+108941b9eba0e5a9b9f89c06246b0ba9c906e3c5 negozio-online/frontend/src/app/store
+c25f3055894d4229fea2683a223e9d75ce2e2617 negozio-online/frontend/src/app/store/actions
+ec290fa128031de7ed99eff2e8df2f0a025fc117 negozio-online/frontend/src/app/store/actions/prodotto.actions.ts
+9318b5a4b3ec52000cf7255bb9ce096887fb6af4 negozio-online/frontend/src/app/store/app.state.ts
+9308014544e3193972ec49486ba5d403ba905ee8 negozio-online/frontend/src/app/store/effects
+6393f2414a71bbc1eecd4a5bb183bbdbf53c4916 negozio-online/frontend/src/app/store/effects/prodotto.effects.ts
+a11deb5fb4fb9eae7cc5e4db0cfd33a9500d88e3 negozio-online/frontend/src/app/store/reducers
+de7cf2221ad235e0a97f5e911aec0cc5659fc64a negozio-online/frontend/src/app/store/reducers/prodotto.reducer.ts
+37d5019a2bd89a919c4e0b08a34079849ee3f684 negozio-online/frontend/src/app/store/selectors
+3953d64fcb39716ae2760007b70c5d87aabb99ba negozio-online/frontend/src/app/store/selectors/prodotto.selectors.ts
+ba6c3eaefb84f2be19634cdf84f4c2b5d67b7514 negozio-online/frontend/src/assets
+2f91e7710828174c5d6b2c48e9d8f6cba81b84c0 negozio-online/frontend/src/assets/immagini
+65d693bd157f4b83004345fef4e208e855ee7f94 negozio-online/frontend/src/environments
+434838bb915db40242d58b8f8503f977e7362437 negozio-online/frontend/src/environments/environment.prod.ts
+c8bd57d5c22d2e7780f0bd595ad536093c0bcfcf negozio-online/frontend/src/environments/environment.ts
+172a7db9b613ffb15894eb6ef817d5a8345aca14 negozio-online/frontend/src/index.html
+38efc199451ab1754d08164b74936065ab193b88 negozio-online/frontend/src/main.ts
+500b84882771d9e3f074c050ca5b022cb050473d negozio-online/frontend/src/polyfills.ts
+ea39dda277af1112a647051374c374103c691bfd negozio-online/frontend/src/styles.css
+58c0f98016469cd95bbcee4b74189c57b9bd22ae negozio-online/frontend/tsconfig.app.json
+e40823ad59a0262cbaf2a5699e372abbfb978e23 negozio-online/frontend/tsconfig.json
+91196c74b71d036d07f5dc58bb0bad557c344242 
+ca5a34a02fc6db666a9f511a75a2e3f5ed5adabd 
+d2eda1047d38f867536e51644222b05700ea6102 negozio-online
+655095101b9806b59b03305166a24f8d461be82c negozio-online/backend
+5c4f7fc7d4cb41d0976f73066daf2ff8139b8350 negozio-online/backend/target
+60ceb5b7d82b4a0571958de04b2ad6794bea6fa8 negozio-online/backend/target/classes
+a7aad113ebc3e31349ae0e31ad0efd0f5708e013 negozio-online/backend/target/classes/META-INF
+4b2c406bee3d3bf8aabefbef566874aa06b11bc7 negozio-online/backend/target/classes/META-INF/build-info.properties
+ce434a420e34e59fd585e0d147e4f2fb0585fd1f negozio-online/frontend
+c653fbdc6732e7e205819cc05381417b9c85f858 negozio-online/frontend/src
+b92c96d8eb4d2654d003c3c3db53a95a4ca1ef97 negozio-online/frontend/src/app
+e51ba2c229c14cc3c5bda0434acb6da3fa5bd5bb negozio-online/frontend/src/app/app.component.css
+f479425b22675d8821c32325c630a6ed8856283d 
+f5ba360afb9e4aee4f69102b8469c5cdeb19ee8f negozio-online
+e67d768833a68fa08c12e221bc3658580fab4d18 negozio-online/backend
+50594e9a58fc943c2f7ece3f4dc4229d7cd47d79 negozio-online/backend/target
+a1f9afa07e0a449236b63abdba01680c96caa974 negozio-online/backend/target/classes
+b42862e21c5d3a4f3607d0569d7ced4a43b11e87 negozio-online/backend/target/classes/META-INF
+a5fc398c47da4b8de5e04e363bfcd66bbdc942d3 negozio-online/backend/target/classes/META-INF/build-info.properties
+9c42cce2603b0d5bc6587a637d58fe928c57a667 negozio-online/backend/target/classes/com
+a69b1c8db0ecb668bc3a77d4204e2d2eb3344962 negozio-online/backend/target/classes/com/negozio
+b7869f27e6982d4f99b3cb4382b513eabc103c93 negozio-online/backend/target/classes/com/negozio/NegozioApplication.class
+3a66f0a270e24f5f39ab8fc69de1204f264192f5 negozio-online/backend/target/classes/com/negozio/configurazione
+b7ae968f1744bb505f24dca39f529bedbe8c22a1 negozio-online/backend/target/classes/com/negozio/configurazione/ConfigurazioneSicurezza.class
+429cc5fc61a5edb39d85d8280938de5d08918d16 negozio-online/backend/target/classes/com/negozio/controller
+ba877058f777e380d4dbd5d04e4d8200f0a97a6e negozio-online/backend/target/classes/com/negozio/controller/AuthController.class
+ae9a71d48e1034e73e83ecc1acbad22999dc741f negozio-online/backend/target/classes/com/negozio/controller/LoginRequest.class
+38bdeac575b3bf2cd8d3aec8ed31126732d15ba3 negozio-online/backend/target/classes/com/negozio/entita
+22f6d8421d33ee83794a47162f0a4cc557260db1 negozio-online/backend/target/classes/com/negozio/entita/Categoria.class
+be6b6f91d456004cb59eb8ad00c1eddcbac83808 negozio-online/backend/target/classes/com/negozio/servizi
+7c1ffda19bc13266a7729d02cf143e4571525821 negozio-online/backend/target/classes/com/negozio/servizi/OrdineService.class
+2fa320acbc49f5e80bad4a9f61797d296c0a0751 negozio-online/backend/target/classes/schema.sql
+9637468a52ec7d4929321b8da5ae4b1990328484 negozio-online/backend/target/maven-status
+3fb48d95e0f8d3c7a07894a03c659b65dd2e714e negozio-online/backend/target/maven-status/maven-compiler-plugin
+51df25854618a1da8bac22f4096b069ec2e59255 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile
+b869ff47677a89b8d5090db4f644419cb452545c negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile
+c67bc7645713fb8670631e090931153166c6dd7d negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+8e5eead5c1d764fd94eeb775cd150a784b7155b3 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+3991877a3429edb648421eefa7116ab5f43a208d negozio-online/frontend
+c21f7c4ed54a80d82120aff31b7c661c9e05995e negozio-online/frontend/angular.json
+a75bf3f41773f9077b37ca675ae9d1fac59d9f75 negozio-online/frontend/package-lock.json
+c316a491ff679a37726d3c62f2fca7b4c1c3e7d3 negozio-online/frontend/package.json
+46151972a3c48b19fbca462988897132487048ae negozio-online/frontend/src
+5ed37536ef501bf8aa2363ea02c0441c0435b3ee negozio-online/frontend/src/app
+4517ce2717475066abe71d54a858885472163967 negozio-online/frontend/src/app/app.component.css
+a72a3120d07f1d04e7d11d4a2af80d399bc907b9 negozio-online/frontend/src/app/app.component.html
+d2711e370031d4a9ccc52b9585ebd91d561c8f83 
+b58cfc36c2365319ed214fee00014d840a949ba1 negozio-online
+597d095c8e48b83e9477ba9f8e33bdda897400ee negozio-online/README.md
+0f8e397190e6b34fed836e7f659b2780519b8b3a negozio-online/backend
+705fccf0e25ee32ec954986149d2e744351e248a negozio-online/backend/pom.xml
+ed9266c3df0d0fa648bf89c21b7d4e3aefae0a6e negozio-online/backend/src
+9dbce287bf0ce69ad1a183a48ac05f3fb7e81632 negozio-online/backend/src/main
+f318eac0df2f67df023ca3f118baec15d31a365d negozio-online/backend/src/main/java
+1286ea8fbba956ad980b9f9d7a2ada0b210aad1f negozio-online/backend/src/main/java/com
+131d6d93b811844bdc849e758ecf16b293f04479 negozio-online/backend/src/main/java/com/negozio
+4356a501a6c1cbd23c7e0b7559e5647d309ae62f negozio-online/backend/src/main/java/com/negozio/Controller
+5395b63c476a2b8ba9d953db1417f9b863afe81a negozio-online/backend/src/main/java/com/negozio/Controller/ProdottoController.java
+b76be8cbe41705e228375ac36c549b5c0f9b8bc8 negozio-online/backend/src/main/java/com/negozio/Controller/TestController.java
+f6cb4719750f821493843c35ac71834912b479bf negozio-online/backend/src/main/java/com/negozio/NegozioApplication.java
+6877da90b43db8069d6b49d4d31ff11bc71bae52 negozio-online/backend/src/main/java/com/negozio/configurazione
+3da8e887e9ca31bad4467951c1e4caf9fdb94997 negozio-online/backend/src/main/java/com/negozio/configurazione/ConfigurazioneSicurezza.java
+15c7c0f7b08ee4929c8f627d1417f036f4e0f866 negozio-online/backend/src/main/java/com/negozio/entita
+fc5321258d41eee5a7283b8c09557d50d5d7725f negozio-online/backend/src/main/java/com/negozio/entita/ElementoOrdine.java
+20428f9c65b5bb61b12008bc1d4dcaf26819e6be negozio-online/backend/src/main/java/com/negozio/entita/Ordine.java
+b7bf15a0b02a9da55e099e75289b7dbba0e929c1 negozio-online/backend/src/main/java/com/negozio/entita/Prodotto.java
+460ff402fe35014424deaa0512570d6c6668ab94 negozio-online/backend/src/main/java/com/negozio/entita/Utente.java
+55f6ad90a025c65587e2d0dd3b987f6f24b484fb negozio-online/backend/src/main/java/com/negozio/repository
+d35a28ab2938129732e74a61834c71c4eebc4e4c negozio-online/backend/src/main/java/com/negozio/repository/ProdottoRepository.java
+e9bf7fc0c8487e51a20ea0e75d103f3cd9f7743b negozio-online/backend/src/main/java/com/negozio/servizi
+da8fcc90f409b7ec28774586628ffaa007b9b23e negozio-online/backend/src/main/java/com/negozio/servizi/ProdottoService.java
+756284c4197662a7837f6d40e55caddb5a33fefb negozio-online/backend/src/main/resources
+fb0f32e57ea0b4696e550a5ed0828711cd57cbfc negozio-online/backend/src/main/resources/application-dev.properties
+37790c4122834a90c3a979e9f68b1f185fac7e96 negozio-online/backend/src/main/resources/application-prod.properties
+2022edfd5fe865bd81b96f76549c3d8fbe9ecc54 negozio-online/backend/src/main/resources/application.properties
+a6327ef4e2f1dd917c027be93a5bcbf24aeac9af negozio-online/backend/src/main/resources/data.sql
+699a59fc222816414b718550940dfa6b703dc217 negozio-online/backend/src/main/resources/schema.sql
+3802f46d057676ee2a0c5bf8a93802b0a2ea4303 negozio-online/backend/src/main/resources/static
+f900d9e6dcdb19220adb034839dada5c34c89862 negozio-online/backend/src/main/resources/static/Foto_Vini_FINALE
+799545d254f6bebfeece1fdfff7b4d05092eca32 negozio-online/backend/target
+55ec239a2cefda13bebc8b1b34ffa29b7778b9fc negozio-online/backend/target/classes
+35b19c74ef3293e16c9172ffa039bcbfe6a70c70 negozio-online/backend/target/classes/META-INF
+468b69ad9563792ed5514fe265ca4083dbf2c8e3 negozio-online/backend/target/classes/META-INF/build-info.properties
+804051b0eff34d35b4c912d156a9434383511322 negozio-online/backend/target/classes/com
+24d4d41d711f2c3f6b90614e2c5ca3984589ed19 negozio-online/backend/target/classes/com/negozio
+2121a043bd24e9483924db97aa5272ee0fb6965f negozio-online/backend/target/classes/com/negozio/NegozioApplication.class
+eeb344528da5766482352a901a8e805e37c14559 negozio-online/backend/target/classes/com/negozio/configurazione
+72cd3652a37d857943e31acc55ab560b9a8415ef negozio-online/backend/target/classes/com/negozio/configurazione/ConfigurazioneSicurezza.class
+5d51728d860366fafa15b9c8f163674b9f97ee96 negozio-online/backend/target/classes/com/negozio/controller
+e27809919d955e904c644ccf5ffbbe20345008ac negozio-online/backend/target/classes/com/negozio/controller/ProdottoController.class
+04d9423e36765b5d6f7c2d91b826ffb049d6017c negozio-online/backend/target/classes/com/negozio/controller/TestController.class
+bd0428eed1f686955fe9af6b7556c03f11b2f310 negozio-online/backend/target/classes/com/negozio/entita
+bfb811e2c02829d638869443dbc01fb908f02613 negozio-online/backend/target/classes/com/negozio/entita/ElementoOrdine.class
+0556cef9d12705f79637b9882b0aec8816a82556 negozio-online/backend/target/classes/com/negozio/entita/Ordine$StatoOrdine.class
+417278a70474a845ed0d6d12335788f35100ff7b negozio-online/backend/target/classes/com/negozio/entita/Ordine.class
+2f2dd7c2dd7cf6b9da24ca0fe38e14f93d630dab negozio-online/backend/target/classes/com/negozio/entita/Prodotto.class
+9ff267042f03149a272906bcdb4c2c27f84c78d2 negozio-online/backend/target/classes/com/negozio/entita/Utente$RuoloUtente.class
+707b1d16d5017aa3d2911812219730f3a6dc4606 negozio-online/backend/target/classes/com/negozio/entita/Utente.class
+150df5367d022609aaf739b1f8f8799b848e6058 negozio-online/backend/target/classes/com/negozio/repository
+883ff961e5b2b008e7eabd41adc08249c11df472 negozio-online/backend/target/classes/com/negozio/repository/ProdottoRepository.class
+e8eb4b03176be6d55d01f6a595e59a5702f3670b negozio-online/backend/target/classes/com/negozio/servizi
+b9c2f7c8a7699b81f1126ced6eb059a3fc0c6368 negozio-online/backend/target/classes/com/negozio/servizi/ProdottoService.class
+18f9fd2016127d48996b41c57d212bebc4f085f9 negozio-online/backend/target/maven-status
+3611bb4ff5848de00c8755aac5c72083eaf0efc9 negozio-online/backend/target/maven-status/maven-compiler-plugin
+7cd2e63a4a8d94b479742e944853ac954a0e6a69 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile
+c7aecd703046c68bbd8baf882e42050603813384 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile
+725ae3ed2d2973cace644e597bb8579b45ac1d77 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+334fb29093d8b155afccc2f0e979c4ed10430f81 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+bc4d41213c3b163f765d8b652561ae68e9230938 negozio-online/frontend
+182f9ae0522a17cbbdbee7a3fbd18749f5cc67b1 negozio-online/frontend/src
+407a3d793b23723d9ef5ed5554fe81a3d010b4ed negozio-online/frontend/src/app
+45ecef0fc8b573facc8c1b62d6dd7960e3f3e505 negozio-online/frontend/src/app/app.component.css
+3e5616a9b11801726fbb65fee53234d5f3298474 negozio-online/frontend/src/app/app.component.html
+0252378b54e0f5e22645a83f7ed0278fb850dcc1 negozio-online/frontend/src/app/app.component.ts
+aad9304c4b80d88a7fd89ef314c1cb59640b325d negozio-online/frontend/src/app/app.module.ts
+2b8b5c658b11f4392cddb2090a83854a0cc55a81 negozio-online/frontend/src/app/componenti
+d6b9859d41d1a6cfddd80ee3a2e6e239cd7c70dc negozio-online/frontend/src/app/componenti/admin.component.html
+a942f3971b68b15c18385cbea97fd85cd3ba3545 negozio-online/frontend/src/app/componenti/admin.component.ts
+3cc98ae00e7b70eff530ba95175d9949dbd619aa negozio-online/frontend/src/app/componenti/carrello.component.html
+624306a6e012bdb931577996b28d126fa52ab5c6 negozio-online/frontend/src/app/componenti/carrello.component.ts
+4db9cd2df60a8e09bf186aee6a54be27a27430aa negozio-online/frontend/src/app/componenti/prodotti.component.css
+12dfbefc951509f17aac7c10bfb5f89a607cd8ee negozio-online/frontend/src/app/componenti/prodotti.component.html
+7ac1da69556c4b127d650855d3a0c45a1823a1cd negozio-online/frontend/src/app/componenti/prodotti.component.ts
+6d43c0849d5c5404a3245b86d2f3b732d0c6e887 negozio-online/frontend/src/app/modelli
+5b055a03eb37c28b77a285cf95d3fe3e5dcab4d8 negozio-online/frontend/src/app/servizi
+668286c7a48103747a7576ea20cca3bd183f4fd5 negozio-online/frontend/src/app/store
+7c01802c760bd1549dd4b8f708bc2b18a421d0de negozio-online/frontend/src/app/store/actions
+0b41f238fa1bc185472a22570e2ccac515ea76d8 negozio-online/frontend/src/app/store/actions/prodotto.actions.ts
+0380bc797fb5442b387639bffbaa5bc690960e64 negozio-online/frontend/src/app/store/reducers
+c3a75f9e036ce88e357f1f480b980364159f2134 negozio-online/frontend/src/app/store/reducers/prodotto.reducer.ts
+2ffda73b0f5a9c9b0fd64f4949f8b2a38251c194 negozio-online/frontend/src/environments
+209b81d8275261ce634a3bc8774cb2c8508123ae negozio-online/frontend/src/environments/environment.prod.ts
+7b551d2fde9e45152f617bd5b17893f40b47d6cf negozio-online/frontend/src/environments/environment.ts
+0bb30257761f4e915e52d07f3d917dbb248e2411 negozio-online/frontend/src/index.html
+0716e51bb800844a250ed4f0e930510cebd05b52 
+7c25ccbad5d1d00c5b56e6d1a62607e2dbb96910 negozio-online
+40a90b8a599776b403cf10b0b4bca5c955f662d3 negozio-online/README.md
+cc792b6277693686c8470f078e5639d2e12bee47 negozio-online/backend
+840ad099f9855d3b5d382f1042a96d79ddfdd5d6 negozio-online/backend/pom.xml
+3a81126bf6420eca656c45beaa54189eeacbce98 negozio-online/backend/src
+0acb4de81a14f5696437f3353fb8e41589d264ea negozio-online/backend/src/main
+3c3cea5132a4c3f2d5678fa26bedf7bc4fc04c7c negozio-online/backend/src/main/java
+dd5f0a31f4fc007bfe551e8397aa0f90a293242b negozio-online/backend/src/main/java/com
+de7de4fec589fbd00f64f927be002cbbd9c94563 negozio-online/backend/src/main/java/com/negozio
+cb65c2b4c37ed3ce3a214fadb7dd455b599e97b2 negozio-online/backend/src/main/java/com/negozio/Controller
+97aeb62ae88bef9d5aca92b6f87c655b425323b5 negozio-online/backend/src/main/java/com/negozio/Controller/ProdottoController.java
+adb6549ba1cb2b5d92cf58712c6d7221ebef8cae negozio-online/backend/src/main/java/com/negozio/configurazione
+9a07a1cc1838b9552b3d19c749a6b3a81a2341ec negozio-online/backend/src/main/java/com/negozio/configurazione/ConfigurazioneCors.java
+b92878c1808ef5a6fc3c392c70599c5fd9c3e9a9 negozio-online/backend/src/main/java/com/negozio/configurazione/ConfigurazioneSicurezza.java
+0856f72c71f66c87bfe0254c801c4c50d5980c95 negozio-online/backend/src/main/resources
+e4e0e6169c14146a8d90aaa89e2d4f7dcb3143fe negozio-online/backend/src/main/resources/data.sql
+318462aaa64af113694b6a6a2a7119897d44d937 negozio-online/backend/src/main/resources/schema.sql
+f8f495aa103b2ec515d94812880b8c098ca877f0 negozio-online/backend/target
+18895e4238351e6c8a91d33a9a9ade6bea927cee negozio-online/backend/target/classes
+fbbc97c524bcc6adcfa262c8e4890e055484d76d negozio-online/backend/target/classes/META-INF
+f5e51dbbbfdf74fc646e5f1107f5bb640c761138 negozio-online/backend/target/classes/META-INF/build-info.properties
+c0376681e0af29665087d07bd4be755954f14d51 negozio-online/backend/target/classes/com
+d05ad5737c02c487d6d401e3d1e0dba386215b68 negozio-online/backend/target/classes/com/negozio
+a65b03f0dc795776deef4097cd5dd465a3d093af negozio-online/backend/target/classes/com/negozio/NegozioApplication.class
+1ebbfd451b3b88a6db04e4e4a8764b718e1e95d2 negozio-online/backend/target/classes/com/negozio/configurazione
+ed8fcca841c340e0a320e3d7ee32f5c755e063ee negozio-online/backend/target/classes/com/negozio/configurazione/ConfigurazioneCors.class
+e8a008ffb78d2a32d4870139c3ee349afa191472 negozio-online/backend/target/classes/com/negozio/configurazione/ConfigurazioneSicurezza.class
+3d50616e8182a42b07216b2829acab917f7d94f7 negozio-online/backend/target/classes/com/negozio/controller
+beaca7992d6367eca33a0435677de88d23ccdcc3 negozio-online/backend/target/classes/com/negozio/controller/ProdottoController.class
+ed834ad554204d8213ecbe52c766bfa390d3c416 negozio-online/backend/target/classes/com/negozio/controller/TestController.class
+074a560f56d53c30d92a91296abecff372a60367 negozio-online/backend/target/classes/com/negozio/entita
+c0d81733666097ebeb48297e18e52d895b46a8c5 negozio-online/backend/target/classes/com/negozio/entita/ElementoOrdine.class
+abf5fdd8708be5b37ae2b01a969e7d1430376dbf negozio-online/backend/target/classes/com/negozio/entita/Ordine$StatoOrdine.class
+caf4657b7a47fcc46afdf76660c9e6b90920d1e3 negozio-online/backend/target/classes/com/negozio/entita/Ordine.class
+b4b12107fa4b13179d39611ee71df988149c6792 negozio-online/backend/target/classes/com/negozio/entita/Prodotto.class
+b9bef7e47b743e170e54b43075c65c3dcf3955a7 negozio-online/backend/target/classes/com/negozio/entita/Utente$RuoloUtente.class
+c1d862e339921a35d7c0e6f19d8c751a81ba7b8c negozio-online/backend/target/classes/com/negozio/entita/Utente.class
+09d3d0a8328cf2e6a209a96a92be2649a2148ac0 negozio-online/backend/target/classes/com/negozio/repository
+4aa1dbd4e6a3a3ba19fe34f15ce7e5d6cda40c1e negozio-online/backend/target/classes/com/negozio/repository/ProdottoRepository.class
+4a4aaeb31e7ed8b8095a0d5defade1036d0d3271 negozio-online/backend/target/classes/com/negozio/servizi
+e78b2f81d971eca72eb362938a293483fc32d7f3 negozio-online/backend/target/classes/com/negozio/servizi/ProdottoService.class
+91c09b8db47ab04cac1fd6650138ad0e7834c574 negozio-online/backend/target/maven-status
+5755a5c046c73cb7348557d8e43ccb747929cbbf negozio-online/backend/target/maven-status/maven-compiler-plugin
+dd0a0691e7ad886843164afb320f577fdbc8cbd9 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile
+4a1a84e00336161fc3d4736b7810be92985de039 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile
+79a0536aa786f91e97b4bc5f940d01c07683fb13 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+00d1e5a0696a33fee4419866e6048310c1835580 negozio-online/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+1db136a19a13619071453ed67b49a431023e5c9c negozio-online/backend/target/negozio-online-backend-1.0.0.jar
+c0828b7615a0c65eb834560793bb4e24969bc717 negozio-online/backend/target/negozio-online-backend-1.0.0.jar.original
+fe1396050f4895fbbff67aabc231539f0d79c29e negozio-online/concatena_codice.py
+455b288d164ea19521685cf4568abc9798b7c37f negozio-online/frontend
+33aa817e559b7acfbaf723339d3358ba9a882307 negozio-online/frontend/src
+bcc33708952af7a4dd9c0b8dd57c68ea2decb354 negozio-online/frontend/src/app
+a02e83166140c3effa50eeb2bf79df82874db4ba negozio-online/frontend/src/app/componenti
+4fe8b93998d5325d13b3ced188a814e95bc9a5e7 negozio-online/frontend/src/app/componenti/prodotti.component.ts
+9cab4bba164fb9babe62473da568c3e347e72875 negozio-online/frontend/src/app/servizi
+cc036aa5acb230fd688bd6cd9fa19ced703d9d1c negozio-online/frontend/src/app/servizi/prodotto.service.ts
+23ff4099bb5f95efe7a7d3c08451befa6e5c019a tutto_il_codice_react_vite_corretto.txt
