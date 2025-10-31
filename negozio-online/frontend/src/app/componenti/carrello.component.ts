@@ -25,6 +25,7 @@ export class CarrelloComponent implements OnInit {
   
   mostraCheckout = false;
   indirizzoSpedizione = '';
+  telefono = '';
   metodoPagamento = 'carta';
   messaggioErrore = '';
   
@@ -45,6 +46,9 @@ export class CarrelloComponent implements OnInit {
       this.utenteCorrente = utente;
       if (utente?.indirizzo) {
         this.indirizzoSpedizione = utente.indirizzo;
+      }
+      if (utente?.telefono) {
+        this.telefono = utente.telefono;
       }
     });
   }
@@ -158,8 +162,10 @@ export class CarrelloComponent implements OnInit {
       return;
     }
 
-    // Debug: controlliamo l'utente corrente
-    console.log('Utente corrente:', this.utenteCorrente);
+    if (!this.telefono.trim()) {
+      alert('Per favore, inserisci un numero di telefono.');
+      return;
+    }
 
     if (!this.utenteCorrente) {
       alert('Devi effettuare il login per completare l\'acquisto.');
@@ -171,14 +177,13 @@ export class CarrelloComponent implements OnInit {
       const ordine = {
         utente: { id: this.utenteCorrente!.id },
         indirizzoSpedizione: this.indirizzoSpedizione,
+        telefono: this.telefono,
         metodoPagamento: this.metodoPagamento,
         elementiOrdine: elementi.map(el => ({
           prodotto: { id: el.prodotto.id },
           quantita: el.quantita
         }))
       };
-
-      console.log('Ordine da inviare:', JSON.stringify(ordine, null, 2));
 
       this.ordineService.creaOrdine(ordine).subscribe({
         next: () => {
@@ -194,7 +199,6 @@ export class CarrelloComponent implements OnInit {
           });
         },
         error: (err: any) => {
-          console.error('Errore durante la creazione dell\'ordine:', err);
           if (typeof err.error === 'string') {
             this.messaggioErrore = err.error;
           } else if (err.message) {
@@ -208,7 +212,7 @@ export class CarrelloComponent implements OnInit {
     });
   }
 
-  trackByProdotto(index: number, elemento: ElementoCarrello): number {
+  trackByProdotto(_: number, elemento: ElementoCarrello): number {
     return elemento.prodotto.id;
   }
 }

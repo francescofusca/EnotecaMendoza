@@ -49,12 +49,13 @@ CREATE TABLE ordini (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     utente_id BIGINT,
     totale DECIMAL(10,2) NOT NULL,
-    stato VARCHAR(20) DEFAULT 'IN_ATTESA', 
-    indirizzo_spedizione TEXT,
+    stato VARCHAR(20) DEFAULT 'IN_ATTESA',
+    indirizzo_spedizione TEXT NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
     metodo_pagamento VARCHAR(50),
     note TEXT,
     data_creazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    data_aggiornamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+    data_aggiornamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (utente_id) REFERENCES utenti(id)
 );
 

@@ -77,6 +77,10 @@
             <textarea id="indirizzo" [(ngModel)]="indirizzoSpedizione" rows="3" class="input-indirizzo"></textarea>
           </div>
           <div class="campo-form">
+            <label for="telefono">Numero di telefono *:</label>
+            <input type="tel" id="telefono" [(ngModel)]="telefono" class="input-indirizzo" placeholder="+39 123 456 7890">
+          </div>
+          <div class="campo-form">
             <label for="pagamento">Metodo di pagamento:</label>
             <select id="pagamento" [(ngModel)]="metodoPagamento" class="select-pagamento">
               <option value="carta">Conto virtuale (Saldo: {{ utenteCorrente?.saldo | number:'1.2-2' }}€)</option>

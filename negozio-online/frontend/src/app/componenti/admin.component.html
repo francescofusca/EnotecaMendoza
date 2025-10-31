@@ -30,6 +30,8 @@
             <tr>
               <th>Ordine #</th>
               <th>Cliente</th>
+              <th>Telefono</th>
+              <th>Indirizzo Spedizione</th>
               <th>Data</th>
               <th>Totale</th>
               <th>Stato Attuale</th>
@@ -41,6 +43,8 @@
             <tr *ngFor="let ordine of tuttiOrdini">
               <td><strong>#{{ordine.id}}</strong></td>
               <td>{{ordine.utente.nome}} {{ordine.utente.cognome}}</td>
+              <td>{{ordine.telefono}}</td>
+              <td><small>{{ordine.indirizzoSpedizione}}</small></td>
               <td>{{ordine.dataCreazione | date:'dd/MM/yyyy HH:mm'}}</td>
               <td class="prezzo-cella">€{{ordine.totale.toFixed(2)}}</td>
               <td>

@@ -21,9 +21,9 @@ INSERT INTO utenti (email, password, nome, cognome, ruolo, saldo) VALUES
 
 
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('I Monaci', 'Giraldi & Giraldi - Uvaggio: Magliocco', 16.00, 12, 1, '/Foto_Vini_FINALE/I-Monaci-IGP-Calabria-Rosso-di-Giraldi-Giraldi.jpg-2.webp');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Don Onofrio', 'Giraldi & Giraldi - Uvaggio: Magliocco', 25.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Don Onofrio', 'Giraldi & Giraldi - Uvaggio: Magliocco', 25.00, 12, 1, '/Foto_Vini_FINALE/don onofrio.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Calabrise', 'Ippolito - Uvaggio: Nerello', 15.00, 12, 1, '/Foto_Vini_FINALE/Calabrise - Ippolito_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('160 Anni', 'Ippolito - Uvaggio: Gaglioppo', 32.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('160 Anni', 'Ippolito - Uvaggio: Gaglioppo', 32.00, 12, 1, '/Foto_Vini_FINALE/160.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Ripe del Falco', 'Ippolito - Uvaggio: Gaglioppo', 37.00, 12, 1, '/Foto_Vini_FINALE/Ripe del Falco - Ippolito_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Virgani', 'Russo e Longo - Uvaggio: Gaglioppo, Magliocco', 15.00, 12, 1, '/Foto_Vini_FINALE/Virgani - Russo e Longo_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Jachello', 'Russo e Longo - Uvaggio: Gaglioppo, Greco nero,Sangiovese', 35.00, 12, 1, '/Foto_Vini_FINALE/Jachello - Russo e Longo_2.png');
@@ -45,7 +45,7 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Nanà', 'Ceraudo - Uvaggio: Gaglioppo, Magliocco', 26.00, 12, 1, '/Foto_Vini_FINALE/Nanà - Ceraudo_2.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Gaudio Rosso', 'Magna Greacia - Uvaggio: Magliocco, Merlot', 18.00, 12, 1, '/Foto_Vini_FINALE/Gaudio Rosso - Magna Greacia_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Baronè', 'Magna Greacia - Uvaggio: Guarnaccia', 33.00, 12, 1, '/Foto_Vini_FINALE/Baronè - Magna Greacia_3.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('VI Secolo', 'Magna Greacia - Uvaggio: Magliocco', 70.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('VI Secolo', 'Magna Greacia - Uvaggio: Magliocco', 70.00, 12, 1, '/Foto_Vini_FINALE/vi secolo.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Cariglio', 'Terre Nobili - Uvaggio: Magliocco', 16.00, 12, 1, '/Foto_Vini_FINALE/Cariglio - Terre Nobili_3.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Alarico', 'Terre Nobili - Uvaggio: Nerello', 24.00, 12, 1, '/Foto_Vini_FINALE/Alarico - Terre Nobili_3.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Teodora', 'Terre Nobili - Uvaggio: Nerello M.,Nerello C.', 42.00, 12, 1, '/Foto_Vini_FINALE/Teodora - Terre Nobili_3.jpg');
@@ -59,7 +59,7 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Portapiana', 'Terre del Gufo - Uvaggio: Magliocco', 26.00, 12, 1, '/Foto_Vini_FINALE/Portapiana - Terre del Gufo_1.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Timpamara', 'Terre del Gufo - Uvaggio: Syrah', 50.00, 12, 1, '/Foto_Vini_FINALE/Timpamara - Terre del Gufo_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Estremo', 'Terre del Gufo - Uvaggio: Magliocco', 29.00, 12, 1, '/Foto_Vini_FINALE/Estremo - Terre del Gufo_3.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('1480 L'' Inizio', 'Odoardi - Uvaggio: Aglianico, Magliocco', 21.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('1480 L'' Inizio', 'Odoardi - Uvaggio: Aglianico, Magliocco', 21.00, 12, 1, '/Foto_Vini_FINALE/1480.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Terra da Mia', 'Odoardi - Uvaggio: Magliocco, Gaglioppo,Nerello, Greco', 24.00, 12, 1, '/Foto_Vini_FINALE/Terra da Mia - Odoardi_1.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('GB', 'Odoardi - Uvaggio: Magliocco, Gaglioppo, Nerello, Greco', 50.00, 12, 1, '/Foto_Vini_FINALE/GB - Odoardi_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Zero 1l.', 'Brigante - Uvaggio: Gaglioppo', 30.00, 12, 1, '/Foto_Vini_FINALE/Zero 1l. - Brigante_3.jpg');
@@ -86,9 +86,9 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Narobio', 'Tenute del Castello - Uvaggio: Aglianico', 22.00, 12, 1, '/Foto_Vini_FINALE/Narobio - Tenute del Castello_1.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Neostos', 'Spiriti Ebbri - Uvaggio: Guarnaccia, Greco, Merlot', 31.00, 12, 1, '/Foto_Vini_FINALE/Neostos - Spiriti Ebbri_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Appianum', 'Spiriti Ebbri - Uvaggio: Magliocco, Gaglioppo, Greco, Nerello', 44.00, 12, 1, '/Foto_Vini_FINALE/Appianum - Spiriti Ebbri_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Amarone Campo Dei Gigli', 'Tenute Sant''Antonio - Uvaggio: Corvina,Rondinella,Croatina,Oseleta', 90.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Telos Amarone Bio', 'Tenute Sant''Antonio - Uvaggio: Corvina,Rondinella,Croatina,Oseleta', 72.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Ripasso Monte Garbi', 'Tenute Sant''Antonio - Uvaggio: Corvina,Rondinella,Croatina,Oseleta', 25.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Amarone Campo Dei Gigli', 'Tenute Sant''Antonio - Uvaggio: Corvina,Rondinella,Croatina,Oseleta', 90.00, 12, 1, '/Foto_Vini_FINALE/campo dei gigli.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Telos Amarone Bio', 'Tenute Sant''Antonio - Uvaggio: Corvina,Rondinella,Croatina,Oseleta', 72.00, 12, 1, '/Foto_Vini_FINALE/telos.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Ripasso Monte Garbi', 'Tenute Sant''Antonio - Uvaggio: Corvina,Rondinella,Croatina,Oseleta', 25.00, 12, 1, '/Foto_Vini_FINALE/ripassomontegarbi.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Amarone (Roccolo Grassi)', 'Roccolo Grassi - Uvaggio: Corvina, Corvinone,Rondinella,Croat.', 80.00, 12, 1, '/Foto_Vini_FINALE/Amarone - Roccolo Grassi_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Ripasso (Rocca Sveva)', 'Rocca Sveva - Uvaggio: Corvina, Molinara, Rondinella', 28.00, 12, 1, '/Foto_Vini_FINALE/Ripasso - Rocca Sveva_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Amarone (Rocca Sveva)', 'Rocca Sveva - Uvaggio: Corvina, Molinara, Rondinella', 65.00, 12, 1, '/Foto_Vini_FINALE/Amarone - Rocca Sveva_2.jpg');
@@ -97,29 +97,29 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Amarone Gastone', 'Massimago - Uvaggio: Corvina, Corvinone, Rondinella', 65.00, 12, 1, '/Foto_Vini_FINALE/Amarone Gastone - Massimago_3.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Cinque Autoctoni', 'Fantini - Uvaggio: Montepu., Prim.,Sangi.,Negroa.,Malva.', 60.00, 12, 1, '/Foto_Vini_FINALE/Cinque Autoctoni - Fantini_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Three Dreamers', 'Fantini - Uvaggio: Montepulciano', 75.00, 12, 1, '/Foto_Vini_FINALE/Three Dreamers - Fantini_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Tancredi Dolce&Gabbana', 'Donna Fugata - Uvaggio: Nero D''Avola, Cabernet S., Tannat', 45.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Etna Cuor Di Lava D&G', 'Donna Fugata - Uvaggio: Nerello Mascalese', 80.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Tancredi Dolce&Gabbana', 'Donna Fugata - Uvaggio: Nero D''Avola, Cabernet S., Tannat', 45.00, 12, 1, '/Foto_Vini_FINALE/tancdolecegabbana.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Etna Cuor Di Lava D&G', 'Donna Fugata - Uvaggio: Nerello Mascalese', 80.00, 12, 1, '/Foto_Vini_FINALE/etnacuorlava.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Etna Rosso', 'Donna Fugata - Uvaggio: Nerello Mascalese', 30.00, 12, 1, '/Foto_Vini_FINALE/Etna Rosso - Donna Fugata_1.webp');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Floramundi', 'Donna Fugata - Uvaggio: Cerasuolo', 24.00, 12, 1, '/Foto_Vini_FINALE/Floramundi - Donna Fugata_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Bell''Assai', 'Donna Fugata - Uvaggio: Frappato', 24.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Bell''Assai', 'Donna Fugata - Uvaggio: Frappato', 24.00, 12, 1, '/Foto_Vini_FINALE/bellassai.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Sedarà', 'Donna Fugata - Uvaggio: Nero D''Avola', 15.00, 12, 1, '/Foto_Vini_FINALE/Sedarà - Donna Fugata_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Barolo (Pio Cesare)', 'Pio Cesare - Uvaggio: Nebbiolo', 90.00, 12, 1, '/Foto_Vini_FINALE/Barolo - Pio Cesare_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Barbera D''alba (Pio Cesare)', 'Pio Cesare - Uvaggio: Barbera', 25.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcetto D''alba (Pio Cesare)', 'Pio Cesare - Uvaggio: Dolcetto', 25.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Barbera D''alba (Pio Cesare)', 'Pio Cesare - Uvaggio: Barbera', 25.00, 12, 1, '/Foto_Vini_FINALE/barberadalba.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcetto D''alba (Pio Cesare)', 'Pio Cesare - Uvaggio: Dolcetto', 25.00, 12, 1, '/Foto_Vini_FINALE/dolcetto dalba pio cesare.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Barolo (Prunotto)', 'Prunotto - Uvaggio: Nebbiolo', 60.00, 12, 1, '/Foto_Vini_FINALE/Barolo - Prunotto_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Barbaresco (Prunotto)', 'Prunotto - Uvaggio: Nebbiolo', 50.00, 12, 1, '/Foto_Vini_FINALE/Barbaresco - Prunotto_1.png');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Barbera D''Alba (Prunotto)', 'Prunotto - Uvaggio: Barbera', 22.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcetto D''Alba (Prunotto)', 'Prunotto - Uvaggio: Dolcetto', 20.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Barbera D''Alba (Prunotto)', 'Prunotto - Uvaggio: Barbera', 22.00, 12, 1, '/Foto_Vini_FINALE/barberadalba.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcetto D''Alba (Prunotto)', 'Prunotto - Uvaggio: Dolcetto', 20.00, 12, 1, '/Foto_Vini_FINALE/dolcetto d alba.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Nebbiolo Occhietti', 'Prunotto - Uvaggio: Nebbiolo', 27.00, 12, 1, '/Foto_Vini_FINALE/Nebbiolo Occhietti - Prunotto_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Nizza Bansella', 'Prunotto - Uvaggio: Barbera', 24.00, 12, 1, '/Foto_Vini_FINALE/Nizza Bansella - Prunotto_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Fralù', 'Bruno Rocca - Uvaggio: Nebbiolo', 35.00, 12, 1, '/Foto_Vini_FINALE/Fralù - Bruno Rocca_3.webp');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Barbaresco (Bruno Rocca)', 'Bruno Rocca - Uvaggio: Nebbiolo', 70.00, 12, 1, '/Foto_Vini_FINALE/Barbaresco - Bruno Rocca_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Bonarda', 'Bisi - Uvaggio: Bonarda', 16.00, 12, 1, '/Foto_Vini_FINALE/Bonarda - Bisi_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Corte del Lupo', 'Ca'' del Bosco - Uvaggio: Merlot, Cabernet F.eS., Carmenérè', 35.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Corte del Lupo', 'Ca'' del Bosco - Uvaggio: Merlot, Cabernet F.eS., Carmenérè', 35.00, 12, 1, '/Foto_Vini_FINALE/corte del lupo.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Chianti Gallo Nero', 'Panaretta - Uvaggio: Sangiovese', 24.00, 12, 1, '/Foto_Vini_FINALE/Chianti Gallo Nero - Panaretta_3.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Noisy', 'Petrognano - Uvaggio: Syrah', 31.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Noisy', 'Petrognano - Uvaggio: Syrah', 31.00, 12, 1, '/Foto_Vini_FINALE/noisy.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Chianti Meme', 'Petrognano - Uvaggio: Sangiovese', 18.00, 12, 1, '/Foto_Vini_FINALE/Chianti Meme - Petrognano_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Petrognano Riserva', 'Petrognano - Uvaggio: Sangiovese', 30.00, 12, 1, '/Foto_Vini_FINALE/Petrognano Riserva - Petrognano_3.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Petrognano Riserva', 'Petrognano - Uvaggio: Sangiovese', 30.00, 12, 1, '/Foto_Vini_FINALE/petroriserva.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Chianti (Banfi)', 'Banfi - Uvaggio: Sangiovese', 14.00, 12, 1, '/Foto_Vini_FINALE/Chianti - Banfi_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Stil Novo', 'Banfi - Uvaggio: Sangiovese', 15.00, 12, 1, '/Foto_Vini_FINALE/Stil Novo - Banfi_3.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Rosso Montalcino (Banfi)', 'Banfi - Uvaggio: Sangiovese', 25.00, 12, 1, '/Foto_Vini_FINALE/Rosso Montalcino - Banfi_3.jpg');
@@ -141,11 +141,11 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Vigna Cantaghel', 'Maso Cantaghel - Uvaggio: Pinot Nero', 36.00, 12, 1, '/Foto_Vini_FINALE/Vigna Cantaghel - Maso Cantaghel_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pinot Nero (Falkestein)', 'Falkestein - Uvaggio: Pinot Nero', 38.00, 12, 1, '/Foto_Vini_FINALE/Pinot Nero - Falkestein_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Taurasi', 'Vesevo - Uvaggio: Aglianico', 50.00, 12, 1, '/Foto_Vini_FINALE/Taurasi - Vesevo_3.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('L''Atto', 'Cantine Del Notaio - Uvaggio: Aglianico', 17.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('L''Atto', 'Cantine Del Notaio - Uvaggio: Aglianico', 17.00, 12, 1, '/Foto_Vini_FINALE/latto.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Il Repertorio', 'Cantine Del Notaio - Uvaggio: Aglianico', 30.00, 12, 1, '/Foto_Vini_FINALE/Il Repertorio - Cantine Del Notaio_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('La Firma', 'Cantine Del Notaio - Uvaggio: Aglianico', 45.00, 12, 1, '/Foto_Vini_FINALE/La Firma - Cantine Del Notaio_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('La Procura', 'Cantina Del Notaio - Uvaggio: Primitivo', 45.00, 12, 1, '/Foto_Vini_FINALE/La Procura - Cantina Del Notaio_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Terre D''Eclano', 'Quintodecimo - Uvaggio: Aglianico', 75.00, 12, 1, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Terre D''Eclano', 'Quintodecimo - Uvaggio: Aglianico', 75.00, 12, 1, '/Foto_Vini_FINALE/terredeclano.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Zero (solfiti)', 'Pipoli - Uvaggio: Aglianico', 18.00, 12, 1, '/Foto_Vini_FINALE/Zero (solfiti) - Pipoli_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Talò', 'S. Marzano - Uvaggio: Negroamaro', 15.00, 12, 1, '/Foto_Vini_FINALE/Talò - S. Marzano_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Sessantanni', 'S.Marzano - Uvaggio: Primitivo', 40.00, 12, 1, '/Foto_Vini_FINALE/Sessantanni - S.Marzano_1.png');
@@ -159,18 +159,18 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Madre Goccia', 'Iuzzolini - Uvaggio: Greco, Chardonnay', 18.00, 12, 2, '/Foto_Vini_FINALE/Madre Goccia - Iuzzolini_3.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Donna Giovanna', 'Iuzzolini - Uvaggio: Greco', 28.00, 12, 2, '/Foto_Vini_FINALE/Donna Giovanna - Iuzzolini_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Arintha', 'Giraldi & Giraldi - Uvaggio: Greco', 14.00, 12, 2, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Arintha', 'Giraldi & Giraldi - Uvaggio: Greco', 14.00, 12, 2, '/Foto_Vini_FINALE/arintha.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Prima Fila', 'Iuzzolini - Uvaggio: Pecorello', 17.00, 12, 2, '/Foto_Vini_FINALE/Prima Fila - Iuzzolini_2.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pecorello', 'Ferrocinto - Uvaggio: Pecorello', 20.00, 12, 2, '/Foto_Vini_FINALE/Pecorello - Ferrocinto_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Neostos', 'Spiriti Ebbri - Uvaggio: Pecorello', 27.00, 12, 2, '/Foto_Vini_FINALE/Neostos - Spiriti Ebbri_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Petelia', 'Ceraudo - Uvaggio: Mantonico, Greco', 22.00, 12, 2, '/Foto_Vini_FINALE/Petelia - Ceraudo_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Baronè (bianco)', 'Magna Graecia - Uvaggio: Pecorello', 24.00, 12, 2, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Baronè (bianco)', 'Magna Graecia - Uvaggio: Pecorello', 24.00, 12, 2, '/Foto_Vini_FINALE/barone bianco.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Lepanio', 'Tenuta del Castello - Uvaggio: Greco, Traminer', 20.00, 12, 2, '/Foto_Vini_FINALE/Lepanio - Tenuta del Castello_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pircoca', 'Masseria Falvo - Uvaggio: Guarnaccia, Traminer', 16.00, 12, 2, '/Foto_Vini_FINALE/Pircoca - Masseria Falvo_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Donna Filomena', 'Masseria Falvo - Uvaggio: Guarnaccia, Traminer', 24.00, 12, 2, '/Foto_Vini_FINALE/Donna Filomena - Masseria Falvo_2.png');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Critone', 'Librandi - Uvaggio: Chardonnay, Sauvignon B.', 15.00, 12, 2, '/Foto_Vini_FINALE/Critone - Librandi_2.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Critone', 'Librandi - Uvaggio: Chardonnay, Sauvignon B.', 15.00, 12, 2, '/Foto_Vini_FINALE/critone.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Santa chiara', 'Terre Nobili - Uvaggio: Greco', 15.00, 12, 2, '/Foto_Vini_FINALE/Santa chiara - Terre Nobili_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Gewurztraminer', 'Tramin - Uvaggio: Traminer', 24.00, 12, 2, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Gewurztraminer', 'Tramin - Uvaggio: Traminer', 24.00, 12, 2, '/Foto_Vini_FINALE/gewurtzaminergrande.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Muller Thurgau', 'Tramin - Uvaggio: Muller Thurgau', 17.00, 12, 2, '/Foto_Vini_FINALE/Muller Thurgau - Tramin_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pinot Bianco', 'Tramin - Uvaggio: Pinot Bianco', 19.00, 12, 2, '/Foto_Vini_FINALE/Pinot Bianco - Tramin_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Ribolla Gialla', 'Di Lenardo - Uvaggio: Ribolla', 14.00, 12, 2, '/Foto_Vini_FINALE/Ribolla Gialla - Di Lenardo_2.jpg');
@@ -178,32 +178,32 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Ligrezza', 'Terre Di Balbia - Uvaggio: Gaglioppo', 22.00, 12, 3, '/Foto_Vini_FINALE/Ligrezza - Terre Di Balbia_1.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Savu', 'I Greco - Uvaggio: Gaglioppo', 14.00, 12, 3, '/Foto_Vini_FINALE/Savu - I Greco_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Terre Lontane', 'Librandi - Uvaggio: Gaglioppo', 16.00, 12, 3, '/Foto_Vini_FINALE/Terre Lontane - Librandi_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Grayasusi E. A.', 'Ceraudo - Uvaggio: Gaglioppo', 0.00, 12, 3, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Grayasusi E. A.', 'Ceraudo - Uvaggio: Gaglioppo', 0.00, 12, 3, '/Foto_Vini_FINALE/garayasusui girladi.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Grayasusi E. R.', 'Ceraudo - Uvaggio: Gaglioppo', 26.00, 12, 3, '/Foto_Vini_FINALE/Grayasusi E. R. - Ceraudo_1.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Lumare', 'Iuzzolini - Uvaggio: Gaglioppo', 18.00, 12, 3, '/Foto_Vini_FINALE/Lumare - Iuzzolini_1.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Fermentino', 'Iuzzolini - Uvaggio: Gaglioppo', 16.00, 12, 3, '/Foto_Vini_FINALE/Fermentino - Iuzzolini_1.png');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Donna Giuliana', 'Giraldi & Giraldi - Uvaggio: Magliocco', 16.00, 12, 3, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Donna Giuliana', 'Giraldi & Giraldi - Uvaggio: Magliocco', 16.00, 12, 3, '/Foto_Vini_FINALE/donna giuliana.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pian delle Rose', 'Tenute del Castello - Uvaggio: Aglianico', 22.00, 12, 3, '/Foto_Vini_FINALE/Pian delle Rose - Tenute del Castello_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pesca Nera', 'Ippolito - Uvaggio: Greco Nero', 18.00, 12, 3, '/Foto_Vini_FINALE/Pesca Nera - Ippolito_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Zero 1l.', 'Brigante - Uvaggio: Gaglioppo', 30.00, 12, 3, '/Foto_Vini_FINALE/Zero 1l. - Brigante_3.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Cirò Manyari''', 'Brigante - Uvaggio: Gaglioppo', 15.00, 12, 3, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Cirò Manyari''', 'Brigante - Uvaggio: Gaglioppo', 15.00, 12, 3, '/Foto_Vini_FINALE/ciro monyari.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Greco Nero', 'Statti - Uvaggio: Greco Nero', 19.00, 12, 3, '/Foto_Vini_FINALE/Greco Nero - Statti_2.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pollino Rosato', 'Ferrocinto - Uvaggio: Aglianico', 17.00, 12, 3, '/Foto_Vini_FINALE/Pollino Rosato - Ferrocinto_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcedorme', 'Ferrocinto - Uvaggio: Aglianico', 18.00, 12, 3, '/Foto_Vini_FINALE/Dolcedorme - Ferrocinto_1.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcedorme', 'Ferrocinto - Uvaggio: Aglianico', 18.00, 12, 3, '/Foto_Vini_FINALE/dolce dorme.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Fili', 'Serracavallo - Uvaggio: Magliocco', 14.00, 12, 3, '/Foto_Vini_FINALE/Fili - Serracavallo_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Don Fili', 'Serracavallo - Uvaggio: Magliocco', 21.00, 12, 3, '/Foto_Vini_FINALE/Don Fili - Serracavallo_2.webp');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Gaudio Rosato', 'Magna Graecia - Uvaggio: Gaglioppo', 19.00, 12, 3, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Colli di Ginestra', 'Russo & Longo - Uvaggio: Gaglioppo, Calabrese', 14.00, 12, 3, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Gaudio Rosato', 'Magna Graecia - Uvaggio: Gaglioppo', 19.00, 12, 3, '/Foto_Vini_FINALE/gaudio rosato.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Colli di Ginestra', 'Russo & Longo - Uvaggio: Gaglioppo, Calabrese', 14.00, 12, 3, '/Foto_Vini_FINALE/colli di ginestra.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Il Pumo', 'San Marzano - Uvaggio: Negroamaro', 14.00, 12, 3, '/Foto_Vini_FINALE/Il Pumo - San Marzano_2.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Tramari', 'San Marzano - Uvaggio: Primitivo', 15.00, 12, 3, '/Foto_Vini_FINALE/Tramari - San Marzano_2.webp');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Scalabrone', 'Antinori - Uvaggio: Cabernet S, Merlot, Syrah', 24.00, 12, 3, '/Foto_Vini_FINALE/Scalabrone - Antinori_2.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Il Rogito', 'Cantine Del Notaio - Uvaggio: Aglianico', 26.00, 12, 3, '/Foto_Vini_FINALE/Il Rogito - Cantine Del Notaio_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Lagrein', 'Tramin - Uvaggio: Lagrein', 17.00, 12, 3, '/Foto_Vini_FINALE/Lagrein - Tramin_2.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Lagrein', 'Tramin - Uvaggio: Lagrein', 17.00, 12, 3, '/Foto_Vini_FINALE/lagrein 375.jpg');
 
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('I Monaci 375ml', 'Giraldi & Giraldi - Uvaggio: Magliocco', 8.00, 12, 4, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('I Monaci 375ml', 'Giraldi & Giraldi - Uvaggio: Magliocco', 8.00, 12, 4, '/Foto_Vini_FINALE/imonaci375ml.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Magliocco 375ml', 'Ferrocinto - Uvaggio: Magliocco', 8.00, 12, 4, '/Foto_Vini_FINALE/Magliocco 375ml - Ferrocinto_3.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcedorme 375ml', 'Ferrocinto - Uvaggio: Aglianico', 8.00, 12, 4, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Terre Lontane 375ml', 'Librandi - Uvaggio: Gaglioppo', 15.00, 12, 4, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcedorme 375ml', 'Ferrocinto - Uvaggio: Aglianico', 8.00, 12, 4, '/Foto_Vini_FINALE/dolce dorme.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Terre Lontane 375ml', 'Librandi - Uvaggio: Gaglioppo', 15.00, 12, 4, '/Foto_Vini_FINALE/terre lontane 375.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Gaglioppo 375ml', 'Statti - Uvaggio: Gaglioppo', 8.00, 12, 4, '/Foto_Vini_FINALE/Gaglioppo 375ml - Statti_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Armacia 375ml', 'Criserà - Uvaggio: Nocera', 9.00, 12, 4, '/Foto_Vini_FINALE/Armacia 375ml - Criserà_2.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Sedarà 375ml', 'Donna Fugata - Uvaggio: Nero D''avola', 7.00, 12, 4, '/Foto_Vini_FINALE/Sedarà 375ml - Donna Fugata_3.png');
@@ -211,39 +211,27 @@ INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_imm
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Rosso di Montepulciano 375ml', 'Poliziano - Uvaggio: Sangiovese', 9.00, 12, 4, '/Foto_Vini_FINALE/Rosso di Montepulciano 375ml - Poliziano_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('S. Cristina 375ml', 'Antinori - Uvaggio: Sangiovese, Merlot', 14.00, 12, 4, '/Foto_Vini_FINALE/S. Cristina 375ml - Antinori_1.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Morellino 375ml', 'Rocca Pesta - Uvaggio: Sangiovese', 9.00, 12, 4, '/Foto_Vini_FINALE/Morellino 375ml - Rocca Pesta_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcetto D'' Alba 375ml', 'Prunotto - Uvaggio: Dolcetto D'' Alba', 10.00, 12, 4, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Dolcetto D'' Alba 375ml', 'Prunotto - Uvaggio: Dolcetto D'' Alba', 10.00, 12, 4, '/Foto_Vini_FINALE/dolcdalba375prunotto.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pinot Nero 375ml', 'Tramin - Uvaggio: Pinot Nero', 17.00, 12, 4, '/Foto_Vini_FINALE/Pinot Nero 375ml - Tramin_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Lagrein 375ml', 'Tramin - Uvaggio: Lagrein', 12.00, 12, 4, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Lagrein 375ml', 'Tramin - Uvaggio: Lagrein', 12.00, 12, 4, '/Foto_Vini_FINALE/lagrein0375.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Timpa del Principe 375ml', 'Ferrocinto - Uvaggio: Greco, Mantonico', 8.00, 12, 4, '/Foto_Vini_FINALE/Timpa del Principe 375ml - Ferrocinto_3.png');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Critone 375ml', 'Librandi - Uvaggio: Chardonnay, Sauvignon', 9.00, 12, 4, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Gewurztraminer 375ml', 'Tramin - Uvaggio: Traminer', 14.00, 12, 4, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Prosecco Bandarossa 375ml', 'Bortolomiol - Uvaggio: Glera', 13.00, 12, 4, '/Foto_Vini_FINALE/Prosecco Bandarossa 375ml - Bortolomiol_1.webp');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Franciacorta Cuvèe Prestige 375ml', 'Ca'' del Bosco - Uvaggio: Pinot B., Pinot N., Chardonnay', 22.00, 12, 4, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Critone 375ml', 'Librandi - Uvaggio: Chardonnay, Sauvignon', 9.00, 12, 4, '/Foto_Vini_FINALE/critone.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Gewurztraminer 375ml', 'Tramin - Uvaggio: Traminer', 14.00, 12, 4, '/Foto_Vini_FINALE/gurzaminter piccolo.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Prosecco Bandarossa 375ml', 'Bortolomiol - Uvaggio: Glera', 13.00, 12, 4, '/Foto_Vini_FINALE/IMG_7767.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Franciacorta Cuvèe Prestige 375ml', 'Ca'' del Bosco - Uvaggio: Pinot B., Pinot N., Chardonnay', 22.00, 12, 4, '/Foto_Vini_FINALE/curveprestige.jpg');
 
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Franciacorta Extra Bru', 'Ca'' del Bosco - Uvaggio: Pinot Bianco, Pinot Nero, Chardonnay', 50.00, 12, 5, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Franciacorta Saten', 'Ca'' del Bosco - Uvaggio: Pinot Bianco, Pinot Nero, Chardonnay', 80.00, 12, 5, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Franciacorta Extra Bru', 'Ca'' del Bosco - Uvaggio: Pinot Bianco, Pinot Nero, Chardonnay', 50.00, 12, 5, '/Foto_Vini_FINALE/franciacortaextrabrucadelbosco.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Franciacorta Saten', 'Ca'' del Bosco - Uvaggio: Pinot Bianco, Pinot Nero, Chardonnay', 80.00, 12, 5, '/Foto_Vini_FINALE/franciacorta-docg-saten-075l-mirabella.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Asti', 'Banfi - Uvaggio: Moscato', 15.00, 12, 5, '/Foto_Vini_FINALE/Asti - Banfi_2.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Prosecco Prior Brut', 'Bortolomiol - Uvaggio: Glera', 22.00, 12, 5, '/Foto_Vini_FINALE/Prosecco Prior Brut - Bortolomiol_2.png');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Prosecco Miol', 'Bortolomiol - Uvaggio: Glera', 16.00, 12, 5, '/Foto_Vini_FINALE/Prosecco Miol - Bortolomiol_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Prosecco Bandarossa', 'Bortolomiol - Uvaggio: Glera', 22.00, 12, 5, '/Foto_Vini_FINALE/placeholder.jpg');
+INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Prosecco Bandarossa', 'Bortolomiol - Uvaggio: Glera', 22.00, 12, 5, '/Foto_Vini_FINALE/IMG_7767.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Prosecco Cartize', 'Bortolomiol - Uvaggio: Glera', 30.00, 12, 5, '/Foto_Vini_FINALE/Prosecco Cartize - Bortolomiol_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Grand Brut', 'Perrier-Jouët - Uvaggio: Pinot Nero, P. Meunier, Chardonnay', 70.00, 12, 5, '/Foto_Vini_FINALE/Grand Brut - Perrier-Jouët_3.jpg');
 INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Blason Rosè', 'Perrier-Jouët - Uvaggio: Pinot Nero, P. Meunier, Chardonnay', 150.00, 12, 5, '/Foto_Vini_FINALE/Blason Rosè - Perrier-Jouët_3.jpg');
 
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Moscato di Saracena', 'Viola - Uvaggio: Pinot Bianco, Pinot Nero, Chardonnay', 6.00, 12, 6, '/Foto_Vini_FINALE/Moscato di Saracena - Viola_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Pass the cookies', 'Di Lenardo - Uvaggio: Verduzzo, Resling', 6.00, 12, 6, '/Foto_Vini_FINALE/Pass the cookies - Di Lenardo_3.png');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Greco di Bianco', 'Baccellieri - Uvaggio: Greco', 5.00, 12, 6, '/Foto_Vini_FINALE/Greco di Bianco - Baccellieri_3.png');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Florus', 'Banfi - Uvaggio: Moscato', 4.00, 12, 6, '/Foto_Vini_FINALE/Florus - Banfi_1.png');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Recioto di Soave', 'Rocca Sveva - Uvaggio: Recioto', 4.00, 12, 6, '/Foto_Vini_FINALE/Recioto di Soave - Rocca Sveva_1.png');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Ben Rye', 'Donna Fugata - Uvaggio: Zibbibo', 5.00, 12, 6, '/Foto_Vini_FINALE/Ben Rye - Donna Fugata_1.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Muffato della Sala', 'Antinori - Uvaggio: Sauvignon, Grechetto,Resling,Traminer', 7.00, 12, 6, '/Foto_Vini_FINALE/Muffato della Sala - Antinori_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Marsala', 'Pellegrino - Uvaggio: Grillo, Insolia,Cataratto', 3.00, 12, 6, '/Foto_Vini_FINALE/placeholder.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Primitivo Dolce', 'Vignaioli del Salento - Uvaggio: Primitivo', 4.00, 12, 6, '/Foto_Vini_FINALE/Primitivo Dolce - Vignaioli del Salento_3.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Vin Santo (Poliziano)', 'Poliziano - Uvaggio: Trebiano', 6.00, 12, 6, '/Foto_Vini_FINALE/Vin Santo - Poliziano_2.jpg');
-INSERT INTO prodotti (nome, descrizione, prezzo, quantita, categoria_id, url_immagine) VALUES ('Vin Santo (Antinori)', 'Antinori - Uvaggio: Trebiano, Malvasia', 4.00, 12, 6, '/Foto_Vini_FINALE/Vin Santo - Antinori_1.jpg');
-
-INSERT INTO ordini (utente_id, totale, stato, indirizzo_spedizione, metodo_pagamento) VALUES
-(2, 47.00, 'CONFERMATO', 'Via Roma 123, 80100 Napoli', 'Carta di Credito');
+INSERT INTO ordini (utente_id, totale, stato, indirizzo_spedizione, telefono, metodo_pagamento) VALUES
+(2, 47.00, 'CONFERMATO', 'Via Roma 123, 80100 Napoli', '+39 081 1234567', 'Carta di Credito');
 
 INSERT INTO elementi_ordine (ordine_id, prodotto_id, quantita, prezzo) VALUES
 (1, 3, 1, 15.00), 

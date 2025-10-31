@@ -30,6 +30,14 @@ public class Ordine {
     @Enumerated(EnumType.STRING)
     private StatoOrdine stato = StatoOrdine.IN_ATTESA;
 
+    // indirizzo di spedizione fornito al momento dell ordine
+    @Column(name = "indirizzo_spedizione", nullable = false, columnDefinition = "TEXT")
+    private String indirizzoSpedizione;
+
+    // numero di telefono per contattare il cliente
+    @Column(name = "telefono", nullable = false)
+    private String telefono;
+
     // quando e stato fatto l ordine
     @Column(name = "data_creazione")
     private LocalDateTime dataCreazione;
@@ -64,4 +72,8 @@ public class Ordine {
     public void setDataCreazione(LocalDateTime dataCreazione) { this.dataCreazione = dataCreazione; }
     public List<ElementoOrdine> getElementiOrdine() { return elementiOrdine; }
     public void setElementiOrdine(List<ElementoOrdine> elementiOrdine) { this.elementiOrdine = elementiOrdine; }
+    public String getIndirizzoSpedizione() { return indirizzoSpedizione; }
+    public void setIndirizzoSpedizione(String indirizzoSpedizione) { this.indirizzoSpedizione = indirizzoSpedizione; }
+    public String getTelefono() { return telefono; }
+    public void setTelefono(String telefono) { this.telefono = telefono; }
 }
