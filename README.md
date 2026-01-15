@@ -7,7 +7,7 @@ https://github.com/user-attachments/assets/681cf2f4-a27d-4692-8e65-6c382b77d093
 
 
 
-**Web Design Project**
+**Web Design University Project**
 
 ## Project Description
 
